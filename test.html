@@ -1,0 +1,81 @@
+// https://www.w3schools.com/code/tryit.asp?filename=GOZXSQD3230F
+
+<!DOCTYPE html>
+<html>
+<body onload="checkReg()">
+ <div id="regDiv"></div><button id="deliteUser">Выйти</button>
+   <div id="dialog-form">
+            <form id="formCheckIn" action="index.html" method="POST">
+             <p class="validateTips">Заполните форму.</p>
+               <label for="name">Имя</label><br>
+               <p id="usName"></p>
+               <input type="text" name="name" id="name" placeholder="Ваше имя"><br>
+               <label for="email">Email</label><br>
+               <p id="usEmail"></p>
+               <input type="text" name="email" id="email" placeholder="Ваш email" ><br>
+               <label for="password">Пароль</label><br>
+                <p id="usPassw"></p>
+               <input type="password" name="password" id="password" placeholder="Пароль"><br>
+               <button  id="btnCheckIn" type="button" name="button">Отправить</button>
+               <button id="clear" type="button" name="button">Очистить</button>
+                <button type="button" name="button" id="close">Закрыть</button>
+
+           </form>
+         </div>
+         <button id="createUser">Регистрация</button>
+ <script>
+ 	function checkReg() {
+    	var divOut = document.getElementById("regDiv");
+    	var s = document.cookie.split('; ');
+        var cookieObject = {};
+        for(var i=0; i < s.length; i++){
+           var c = s[i].split('=');
+           cookieObject[c[0]] = c[1];
+        }
+        if('register' in cookieObject && 'regEmail' in cookieObject && 'regPass' in cookieObject ) {
+        	divOut.innerHTML = "Hello, " + cookieObject['register'];
+
+            var btn = document.getElementById("createUser");
+            var btn1 = document.getElementById("deliteUser");
+            btn.style.display = "none";
+            btn1.style.display = "block";
+        }
+        else {
+        	btn.style.display = "block";
+            btn1.style.display = "none";
+        }
+    };
+    document.getElementById("btnCheckIn").addEventListener("click",function() {
+
+    	var inputName = document.getElementById("name").value;
+        var inputEmail = document.getElementById("email").value;
+        var inputPassw = document.getElementById("password").value;
+
+        var expDate = new Date;
+        expDate.setTime((new Date).getTime() + 60*1000);
+
+        document.cookie = "register="+inputName+"; expires="+expDate.toGMTString()+"; path=/";
+        document.cookie = "regEmail="+inputEmail+"; expires="+expDate.toGMTString()+"; path=/";
+        document.cookie = "regPass="+inputPassw+"; expires="+expDate.toGMTString()+"; path=/";
+        document.getElementById("createUser").style.display = "none";
+
+document.getElementById("deliteUser").style.display = "block";
+
+    	document.getElementById('formCheckIn').submit();
+        checkReg();
+    });
+
+     document.getElementById("deliteUser").addEventListener("click",function(){
+      var expDate = new Date;
+      expDate.setTime((new Date).getTime() - 600*1000);
+       document.cookie = "register="+inputName+"; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+        document.cookie = "regEmail="+inputEmail+"; expires="+expDate.toGMTString()+"; path=/";
+        document.cookie = "regPass="+inputPassw+"; expires="+expDate.toGMTString()+"; path=/";
+         document.getElementById("createUser").style.display = "block";
+
+         document.getElementById("deliteUser").style.display = "none";
+        checkReg();
+     });
+ </script>
+</body>
+</html>

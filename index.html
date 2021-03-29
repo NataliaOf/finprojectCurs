@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Курсы ланшафтного дизайна</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+
+        <div class="box-nav">
+
+          <div class="logo">
+            <a href="index.html">
+              <span class="logo">Logo</span>
+
+            </a>
+
+          </div>
+
+          <nav class="menu">
+            <ul class="menu_list">
+              <div class="burger">
+                <span></span>
+              </div>
+
+              <li><a class="menu_link active" href="index.html">Главная</a></li>
+              <li><a class="menu_link" href="#">Курсы</a>
+
+                <ul class="sub-menu_list">
+                  <li><a class="sub-menu_link" href="#">Базовые</a></li>
+                  <li><a class="sub-menu_link" href="#">Эконом</a></li>
+                  <li><a class="sub-menu_link" href="#">Люкс</a></li>
+                </ul>
+
+              </li>
+              <li><a class="menu_link" href="#">О нас</a></li>
+
+            </ul>
+          </nav>
+
+
+          <div class="check-in">
+            <!-- <div id="theme" class="theme-switcher" >
+              <span>&#9728;</span>
+            </div> -->
+            <div id="regDiv"></div><button id="deliteUser">Выйти</button>
+            <div id="dialog-form">
+              <form id="formCheckIn" action="index.html" method="POST">
+               <p class="validateTips">Заполните форму.</p>
+                 <label for="name">Имя</label><br>
+                 <p id="usName"></p>
+                 <input type="text" name="name" id="name" placeholder="Ваше имя"><br>
+                 <label for="email">Email</label><br>
+                 <p id="usEmail"></p>
+                 <input type="text" name="email" id="email" placeholder="Ваш email" ><br>
+                 <label for="password">Пароль</label><br>
+                  <p id="usPassw"></p>
+                 <input type="password" name="password" id="password" placeholder="Пароль"><br>
+                 <button  id="btnCheckIn" type="button" name="button">Отправить</button>
+                 <button id="clear" type="button" name="button">Очистить</button>
+                  <button type="button" name="button" id="close">Закрыть</button>
+
+             </form>
+           </div>
+           <div id="regDiv"></div>
+           <button id="createUser">Регистрация</button>
+        </div>
+      </div>
+
+
+  </header>
+  <main>
+    <div class="wrapper">
+      <div class="main">
+        <section class="main_info">
+          <div class="info_box">
+            <h1>Курсы ланшафтного дизайна</h1>
+            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, possimus.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
+               eveniet qui assumenda in rerum vero reprehenderit enim vel ipsam
+               sapiente est velit, architecto, odit nostrum quia dignissimos incidunt
+                ut soluta.
+            </p>
+            <div class="content">
+              <div class="plication-form">
+                <h3>Оставьте заявку:</h3>
+                <form id="formApplication" action="telegram.php" method="POST" >
+                  <p id="nameValid"></p><br>
+                  <input id="userName" type="text" name="userName" placeholder="Ваше имя"><br>
+                  <p id="phoneValid"></p><br>
+                  <input id="userTel" type="tel" name="userTel"placeholder="Ваш телефон"><br>
+
+                </form>
+                <button id="applicationBtn" type="submit">Отправить</button>
+              </div>
+              <div class="video">
+                <!-- <div class="preloader">
+                  <div class="preloader_image"></div>
+                </div> -->
+                <h3>Смотреть видео:</h3>
+                <button id="btnVideo" type="button" name="button">Видео</button>
+                <!-- <img id="btnVideo"src="image/play.png" alt="Включить видео" width="100px"> -->
+                <div id="video">
+                  <iframe  src="https://www.youtube.com/embed/3CSbre1Ptek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+            <hr>
+            <div class="social">
+              <a href="#"><img src="images/facebook.png" alt="facebook"></a>
+              <a href="#"><img src="images/Instagram.png" alt="Instagram"></a>
+              <a href="#"><img src="images/youtube.png" alt="youtube"></a>
+            </div>
+        </section>
+        <section class="skills">
+          <h2>Вы научитесь!</h2>
+          <div class="wrapper_srills">
+            <div class="skills_info">
+              <h3>Чертить план</h3>
+              <img src="images/project.jpg" alt="Чертить план">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, sint.
+              </p>
+            </div>
+            <div class="skills_info">
+              <h3>Делать визуализацию</h3>
+              <img src="images/model.jpg" alt="Делать визуализацию">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, sint.
+              </p>
+            </div>
+            <div class="skills_info">
+              <h3>Воплотить идею в жизнь</h3>
+              <img src="images/result.jpg" alt="Воплотить идею в жизнь">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, sint.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- <section class="gallery">
+          <h2>Галерея работ выпускников</h2>
+          <div class="greed_box">
+            <div class="work work1">
+              <p>10 лет опыта обучения</p>
+            </div>
+            <div class="work work2">
+             <p>Место для вашей работы</p>
+            </div>
+            <div class="work work3">
+              <img src="images/work1.jpg" alt="">
+            </div>
+            <div class="work work4">
+              <img src="images/work1.jpg" alt="">
+            </div>
+            <div class="work work5">
+              <img src="images/work1.jpg" alt="">
+            </div>
+            <div class="work work6">
+              <img src="images/work1.jpg" alt="">
+            </div>
+            <div class="work work7">
+              <img src="images/work1.jpg" alt="">
+            </div>
+            <div class="work work8">
+              <img src="images/work1.jpg" alt="">
+            </div>
+            <div class="work work9">
+              <img src="images/work1.jpg" alt="">
+            </div>
+            <div class="work work10">
+              <img src="images/work1.jpg" alt="">
+            </div>
+          </div>
+        </section> -->
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="wrapper_foorer">
+        <div class="logo_footer">
+          <span>LOGO</span>
+        </div>
+        <div class="footer_menu">
+          <h3>Меню</h3>
+          <ul class="footer_menu_list">
+            <li><a class="footer_menu_link " href="index.html">Главная</a></li>
+            <li><a class="footer_menu_link " href="#">Курсы</a></li>
+            <li><a class="footer_menu_link" href="about.html">О нас</a></li>
+
+          </ul>
+          </div>
+          <div class="footer_curses">
+            <h3>Тарифы курсов</h3>
+            <ul class="footer_curses_list">
+              <li><a class="footer_menu_link " href="#">Бесплатно</a></li>
+              <li><a class="footer_menu_link " href="#">Эконом</a></li>
+              <li><a class="footer_menu_link" href="#">Люкс</a></li>
+
+            </ul>
+          </div>
+          <div class="footr_social">
+            <h3>Мы в соцсетях</h3>
+            <a href="#"><img src="images/facebook.png" alt="facebook"></a><br>
+            <a href="#"><img src="images/Instagram.png" alt="Instagram"></a><br>
+            <a href="#"><img src="images/youtube.png" alt="youtube"></a><br>
+          </div>
+
+      </div>
+      <div class="autor">
+        <h3>Natalija Oficerova</h3>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/form.js"></script>
+  <script>
+
+
+
+  $( function() {
+    // переключение светлой и темной темы
+    $('.theme-switcher').click(function(){
+      $('body').toggleClass("dark");
+      localStorage.setItem('theme', 'dark')
+    })
+
+    // Бургер
+    $('.burger').click(function(){
+      // открываю, закрываю меню
+      $('.burger, .menu_list').toggleClass('activMob');
+      // Запрещаю скрод страницы при открытом меню
+      $('body').toggleClass('lock');
+    });
+
+
+
+  } );
+  </script>
+</body>
+</html>
