@@ -1,19 +1,8 @@
 // console.log(document.getElementById("applicationBtn"));
 
 
-// функция проверки куки при загрузке
+// Функция прверки куки при загрузке
 function checkReg() {
-// Переключение светлой и темной темы
-
-  // if(document.body.classList.contains('dark')){
-  //   console.log("light");
-  //   document.body.classList.add('light');
-  //   document.body.classList.remove('dark')
-  // }else{
-  //     console.log("dark");
-  //   document.body.classList.add('dark');
-  //   document.body.classList.remove('light');
-  // }
 
 
     	var divOut = document.getElementById("regDiv");
@@ -53,7 +42,7 @@ application.addEventListener('click', function(){
   let phСheck = /^\+\d{12}$/;
 
   // Проверка имени
-    if(!nameСheck.test(name) && name.length<3){
+    if(!nameСheck.test(name) || name.length<3){
       document.getElementById('userName').classList.add('noValid');
       document.getElementById('nameValid').innerText = "Введите свое имя";
     }else{
@@ -177,5 +166,18 @@ clear.addEventListener('click', function(){
   document.getElementById('usName').innerText = "";
   document.getElementById('usEmail').innerText = "";
   document.getElementById('usPassw').innerText = "";
+
+});
+let clear2 = document.getElementById("clear2");
+
+clear2.addEventListener('click', function(){
+  //  очистка формы
+  var name = document.getElementById('userName').value = "";
+  var phone = document.getElementById('userTel').value="";
+
+  //Очистка абзацов
+  document.getElementById('nameValid').innerText = "";
+  document.getElementById('phoneValid').innerText = "";
+
 
 });
