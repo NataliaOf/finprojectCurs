@@ -147,20 +147,20 @@ document.getElementById("deliteUser").addEventListener("click",function() {
       document.getElementById("deliteUser").style.display = "none";//выйти
         document.getElementById('regDiv').innerText = "";
 
-      
-        var s = document.cookie.split('; ');
-        var cookieObject = {};
-        for(var i=0; i < s.length; i++){
-          var c = s[i].split('=');
-          cookieObject[c[0]] = c[1];
-        }
-        for(var co in cookieObject)
-        window.out.innerHTML += co + " = " + cookieObject[co] + "<br/>";
-      var expDate = new Date;
-      expDate.setTime((new Date).getTime() - 60*1000);
-       document.cookie = "register="+inputName+"; expires="+expDate.toGMTString()+"; path=/";
-        document.cookie = "regEmail="+inputEmail+"; expires="+expDate.toGMTString()+"; path=/";
-        document.cookie = "regPass="+inputPassw+"; expires="+expDate.toGMTString()+"; path=/";
+        var cookies = document.cookie.split(";");
+
+      for (var i = 0; i < cookies.length; i++) {
+          var cookie = cookies[i];
+          var eqPos = cookie.indexOf("=");
+          var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+          document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+      }
+
+      // var expDate = new Date;
+      // expDate.setTime((new Date).getTime() - 60*1000);
+      //  document.cookie = "register="+inputName+"; expires="+expDate.toGMTString()+"; path=/";
+      //   document.cookie = "regEmail="+inputEmail+"; expires="+expDate.toGMTString()+"; path=/";
+      //   document.cookie = "regPass="+inputPassw+"; expires="+expDate.toGMTString()+"; path=/";
 
       checkReg();
      });
