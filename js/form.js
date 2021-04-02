@@ -145,16 +145,17 @@ console.log(document.getElementById("createUser"));
 // Функция удаления куки
 
 document.getElementById("deliteUser").addEventListener("click",function() {
+  // показываю кнопку регимтрация
        document.getElementById("createUser").style.display = "block";//регистрация
-       console.log(document.getElementById("createUser"));
+      // Скрываю кнопку выйти
        document.getElementById("deliteUser").style.display = "none";//выйти
-       console.log( document.getElementById("deliteUser"));
+       // Стираю содержимое приветствия
         document.getElementById('regDiv').innerText = "";
-console.log("Очистка");
+// Удаляю куки
        document.cookie = "register=; expires=Tue, 19 Jan 2019 03:14:07 GMT";
         document.cookie = "regEmail=; expires=Tue, 19 Jan 2019 03:14:07 GMT";
         document.cookie = "regPass=;expires=Tue, 19 Jan 2019 03:14:07 GMT";
-
+// запускаю функцию проверки куки при загрузке
       checkReg();
      });
 
