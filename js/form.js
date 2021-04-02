@@ -62,13 +62,15 @@ application.addEventListener('click', function(){
       }
 });
 
-
+console.log(document.getElementById("btnCheckIn"));
 // Проверка регистрации
 
 let btnCheckIn = document.getElementById("btnCheckIn");
 
 btnCheckIn.addEventListener('click', function(){
-
+console.log(document.getElementById("createUser"));
+console.log( document.getElementById("deliteUser"));
+console.log("Отправить");
   // Проверки
 
   let nameCheck =  /^[а-я]/i;
@@ -132,9 +134,9 @@ btnCheckIn.addEventListener('click', function(){
         document.cookie = "regEmail="+inputEmail+"; expires="+expDate.toGMTString()+"; path=/";
         document.cookie = "regPass="+inputPassw+"; expires="+expDate.toGMTString()+"; path=/";
         document.getElementById("createUser").style.display = "none";
-
+console.log(document.getElementById("createUser"));
         document.getElementById("deliteUser").style.display = "block";
-
+ console.log( document.getElementById("deliteUser"));
     	// document.getElementById('formCheckIn').submit();
         checkReg();
 
@@ -143,13 +145,12 @@ btnCheckIn.addEventListener('click', function(){
 // Функция удаления куки
 
 document.getElementById("deliteUser").addEventListener("click",function() {
-      document.getElementById("createUser").style.display = "block";//регистрация
-      document.getElementById("deliteUser").style.display = "none";//выйти
+       document.getElementById("createUser").style.display = "block";//регистрация
+       console.log(document.getElementById("createUser"));
+       document.getElementById("deliteUser").style.display = "none";//выйти
+       console.log( document.getElementById("deliteUser"));
         document.getElementById('regDiv').innerText = "";
-
-
-
-      
+console.log("Очистка");
        document.cookie = "register=; expires=Tue, 19 Jan 2019 03:14:07 GMT";
         document.cookie = "regEmail=; expires=Tue, 19 Jan 2019 03:14:07 GMT";
         document.cookie = "regPass=;expires=Tue, 19 Jan 2019 03:14:07 GMT";
@@ -169,6 +170,10 @@ clear.addEventListener('click', function(){
   document.getElementById('usEmail').innerText = "";
   document.getElementById('usPassw').innerText = "";
 
+  document.getElementById('name').classList.remove('noValid');
+  document.getElementById('email').classList.remove('noValid');
+  document.getElementById('password').classList.remove('noValid');
+
 });
 let clear2 = document.getElementById("clear2");
 
@@ -180,6 +185,10 @@ clear2.addEventListener('click', function(){
   //Очистка абзацов
   document.getElementById('nameValid').innerText = "";
   document.getElementById('phoneValid').innerText = "";
+
+
+document.getElementById('userName').classList.remove('noValid');
+document.getElementById('userTel').classList.remove('noValid');
 
 
 });
