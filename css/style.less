@@ -111,11 +111,12 @@ button:hover{
   outline: 0;
   // 9px 7px 8px 0px rgba(230, 236, 240, 0.3);
 }
-button:active{
+button:active, button:focus{
   outline-offset: 0;
   outline: 0;
   background-color: red;
 }
+
 input{
   padding: 5px 10px;
   border: 2px solid #ccc;
@@ -166,6 +167,10 @@ footer{
   .logo{
     width: 50px;
     height: 50px;
+    img{
+      width: 100%;
+      border-radius: 50%;
+    }
   }
   nav.menu{
 
@@ -240,7 +245,7 @@ footer{
 }
 
 .main{
-  margin-top: -500px ;
+
   margin: auto;
   margin-top: -500px ;
   padding: 20px;
@@ -281,7 +286,7 @@ footer{
            top: 0;
            left: 0;
            iframe{
-             margin-top: 15%;
+             margin-top: 10%;
              width: 60%;
              height: 30vw;
            }
@@ -394,10 +399,29 @@ footer{
     padding: 20px 0;
     .flex();
   color: #000;
+  .logo_footer{
+    width: 100px;
+    img{
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  }
+  .social_logo{
+    .flex();
+    img{
+      width: 30px;
+      transition: .5s;
+
+    &:hover{
+      .hover_div;
+    }
+    }
   }
   .autor{
     width: 40%;
-    background-color: #fff;
+    // background-color: #fff;
     text-align: center;
     padding: 10px;
     margin: 0 auto;
@@ -407,9 +431,12 @@ footer{
       margin-bottom: 0;
     }
   }
-  ul li a{
-    color: #000;
-    padding: 20px 0;
+  ul li {
+
+    padding: 5px 0;
+     a{
+      color: #000;
+    }
   }
   h3{
     color: #000;
