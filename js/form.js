@@ -147,20 +147,12 @@ document.getElementById("deliteUser").addEventListener("click",function() {
       document.getElementById("deliteUser").style.display = "none";//выйти
         document.getElementById('regDiv').innerText = "";
 
-        var cookies = document.cookie.split(";");
 
-      for (var i = 0; i < cookies.length; i++) {
-          var cookie = cookies[i];
-          var eqPos = cookie.indexOf("=");
-          var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-          document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-      }
 
-      // var expDate = new Date;
-      // expDate.setTime((new Date).getTime() - 60*1000);
-      //  document.cookie = "register="+inputName+"; expires="+expDate.toGMTString()+"; path=/";
-      //   document.cookie = "regEmail="+inputEmail+"; expires="+expDate.toGMTString()+"; path=/";
-      //   document.cookie = "regPass="+inputPassw+"; expires="+expDate.toGMTString()+"; path=/";
+      
+       document.cookie = "register=; expires=Tue, 19 Jan 2019 03:14:07 GMT";
+        document.cookie = "regEmail=; expires=Tue, 19 Jan 2019 03:14:07 GMT";
+        document.cookie = "regPass=;expires=Tue, 19 Jan 2019 03:14:07 GMT";
 
       checkReg();
      });

@@ -204,6 +204,9 @@ header {
   position: relative;
   right: 40px;
 }
+.box-nav .check-in #regDiv {
+  color: #ffffff;
+}
 .box-nav .check-in #dialog-form {
   display: none;
   background-color: #554c4a;
