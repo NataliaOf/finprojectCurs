@@ -33,7 +33,7 @@
               </div>
 
               <li><a class="menu_link active" href="index.html">Главная</a></li>
-              <li><a class="menu_link" href="#">Курсы</a>
+              <li><a class="menu_link" href="courses.html">Курсы</a>
 
                 <ul class="sub-menu_list">
                   <li><a class="sub-menu_link" href="#">Базовые</a></li>
@@ -42,7 +42,7 @@
                 </ul>
 
               </li>
-              <li><a class="menu_link" href="#">О нас</a></li>
+              <li><a class="menu_link" href="about.html">О нас</a></li>
 
             </ul>
           </nav>
@@ -83,23 +83,35 @@
 
   </header>
   <main>
+    <div id="cookie">
+      <p>
+        На сайте используются файлы cookies, щни делают его удобнеею Посещая страницы сайта,
+       Вы соглашаетесь с Политикой конфиденцифльности!
+      </p>
+      <button id="deliteDivCookie">OK</button>
+    </div>
 
     <div class="wrapper">
       <div class="main">
         <section class="main_info">
           <div class="info_box">
-            <h1>Курсы ланшафтного дизайна</h1>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, possimus.</h3>
-            <div class="contact">
-              <p class="tel">
-                <a href="tel:+380958888888">Тел: +3 8(095)888-88-88</a>
-              </p>
-              <p class="email">
-                <a href="mailto:nataliaof380@gmail.com">Задавайте вопросы по электронной почте</a>
-              </p>
-            </div>
-            <div class="content">
-              <div class="plication-form">
+            <h1 class="_anim-items _anim-no-hide">Курсы ланшафтного дизайна</h1>
+          <p class="_anim-items _anim-no-hide">
+            Профессия Ландшафтный дизайнер
+            Вы научитесь проектировать участки, сады и парки, создавать эскизы, чертежи и ландшафтные проекты в 3D — и точно попадать в желания заказчика. Соберёте портфолио и сможете работать в дизайн-студии или на фрилансе.
+
+          </p>
+          <div class="contact _anim-items _anim-no-hide">
+
+            <p>
+              <a href="tel:+380958888888">Тел: +3 8(095)888-88-88</a>
+            </p>
+            <p>
+              <a href="mailto:nataliaof380@gmail.com">Задавайте вопросы по электронной почте</a>
+            </p>
+          </div>
+            <div class="content _anim-items _anim-no-hide">
+              <div class="plication-form _anim-items _anim-no-hide">
                 <h3>Оставьте заявку:</h3>
                 <form id="formApplication" action="telegram.php" method="POST" >
 
@@ -113,10 +125,8 @@
                 <button id="applicationBtn" type="submit">Отправить</button>
                 <button id="clear2" type="submit">Очистить</button>
               </div>
-              <div class="video">
-                <!-- <div class="preloader">
-                  <div class="preloader_image"></div>
-                </div> -->
+              <div class="video _anim-items _anim-no-hide">
+
                 <h3>Смотреть видео:</h3>
                 <button id="btnVideo" type="button" name="button">Видео</button>
                 <!-- <img id="btnVideo"src="image/play.png" alt="Включить видео" width="100px"> -->
@@ -136,23 +146,23 @@
             </div>
         </section>
         <section class="skills">
-          <h2>Вы научитесь!</h2>
-          <div class="wrapper_srills">
-            <div class="skills_info">
+          <h2 class="_anim-items _anim-no-hide">Вы научитесь!</h2>
+          <div class="wrapper_srills _anim-items _anim-no-hide">
+            <div class="skills_info" >
               <h3>Чертить план</h3>
               <img src="images/project.jpg" alt="Чертить план">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, sint.
               </p>
             </div>
-            <div class="skills_info">
+            <div class="skills_info ">
               <h3>Делать визуализацию</h3>
               <img src="images/model.jpg" alt="Делать визуализацию">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, sint.
               </p>
             </div>
-            <div class="skills_info">
+            <div class="skills_info ">
               <h3>Воплотить идею в жизнь</h3>
               <img src="images/galery1.jpg" alt="Воплотить идею в жизнь">
               <p>
@@ -164,7 +174,7 @@
 
         <section class="gallery">
           <h2>Галерея работ выпускников</h2>
-          <div class="greed_box">
+          <div class="greed_box" id="gallery">
             <div class="work work1">
             <img src="images/galery1.jpg" alt="">
             </div>
@@ -213,7 +223,7 @@
           <h3>Меню</h3>
           <ul class="footer_menu_list">
             <li><a class="footer_menu_link " href="index.html">Главная</a></li>
-            <li><a class="footer_menu_link " href="#">Курсы</a></li>
+            <li><a class="footer_menu_link " href="courses.html">Курсы</a></li>
             <li><a class="footer_menu_link" href="about.html">О нас</a></li>
 
           </ul>
@@ -259,6 +269,7 @@
     // Бургер
     $('.burger').click(function(){
       // открываю, закрываю меню
+      console.log("меню");
       $('.burger, .menu_list').toggleClass('activMob');
       // Запрещаю скрод страницы при открытом меню
       $('body').toggleClass('lock');

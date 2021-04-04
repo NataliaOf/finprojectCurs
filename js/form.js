@@ -1,66 +1,7 @@
 // console.log(document.getElementById("applicationBtn"));
 
 
-// Функция прверки куки при загрузке
-function checkReg() {
 
-
-    	var divOut = document.getElementById("regDiv");
-    	var s = document.cookie.split('; ');
-        var cookieObject = {};
-        for(var i=0; i < s.length; i++){
-           var c = s[i].split('=');
-           cookieObject[c[0]] = c[1];
-        }
-        if('register' in cookieObject && 'regEmail' in cookieObject && 'regPass' in cookieObject ) {
-        	divOut.innerHTML = "Hello, " + cookieObject['register'];
-
-            var btn = document.getElementById("createUser");
-            var btn1 = document.getElementById("deliteUser");
-            btn.style.display = "none";
-            btn1.style.display = "block";
-        }
-        else {
-        	btn.style.display = "block";
-          btn1.style.display = "none";
-        }
-    };
-
-
-let application = document.getElementById("applicationBtn");
-
-application.addEventListener('click', function(){
-  // Содержание input
-  var name = document.getElementById('userName').value;
-
-  var phone =  document.getElementById('userTel').value;
-
-  // Проверка на Буквы
-    let nameСheck = /^[а-я]/i;
-
-  // Провкрка номера телефона
-  let phСheck = /^\+\d{12}$/;
-
-  // Проверка имени
-    if(!nameСheck.test(name) || name.length<3){
-      document.getElementById('userName').classList.add('noValid');
-      document.getElementById('nameValid').innerText = "Введите свое имя";
-    }else{
-      document.getElementById('userName').classList.remove('noValid');
-      document.getElementById('nameValid').innerText = "";
-    }
-
-    // Проверка телефона
-      if(!phСheck.test(phone)){
-       document.getElementById('userTel').classList.add('noValid');
-        document.getElementById('phoneValid').innerText = "Введите свой телефон";
-      }else{
-        document.getElementById('userTel').classList.remove('noValid');
-        document.getElementById('phoneValid').innerText = "";
-
-        document.getElementById('formApplication').submit();
-      }
-});
 
 console.log(document.getElementById("btnCheckIn"));
 // Проверка регистрации
@@ -68,6 +9,7 @@ console.log(document.getElementById("btnCheckIn"));
 let btnCheckIn = document.getElementById("btnCheckIn");
 
 btnCheckIn.addEventListener('click', function(){
+  console.log("регистрация");
 console.log(document.getElementById("createUser"));
 console.log( document.getElementById("deliteUser"));
 console.log("Отправить");
@@ -192,4 +134,65 @@ document.getElementById('userName').classList.remove('noValid');
 document.getElementById('userTel').classList.remove('noValid');
 
 
+});
+
+// Функция прверки куки при загрузке
+function checkReg() {
+
+
+    	var divOut = document.getElementById("regDiv");
+    	var s = document.cookie.split('; ');
+        var cookieObject = {};
+        for(var i=0; i < s.length; i++){
+           var c = s[i].split('=');
+           cookieObject[c[0]] = c[1];
+        }
+        if('register' in cookieObject && 'regEmail' in cookieObject && 'regPass' in cookieObject ) {
+        	divOut.innerHTML = "Hello, " + cookieObject['register'];
+
+            var btn = document.getElementById("createUser");
+            var btn1 = document.getElementById("deliteUser");
+            btn.style.display = "none";
+            btn1.style.display = "block";
+        }
+        else {
+        	btn.style.display = "block";
+          btn1.style.display = "none";
+        }
+    };
+
+// функция проверки формы "Оставить заявку"
+let application = document.getElementById("applicationBtn");
+
+application.addEventListener('click', function(){
+  // Содержание input
+  var name = document.getElementById('userName').value;
+
+  var phone =  document.getElementById('userTel').value;
+
+  // Проверка на Буквы
+    let nameСheck = /^[а-я]/i;
+
+  // Провкрка номера телефона
+  let phСheck = /^\+\d{12}$/;
+
+  // Проверка имени
+    if(!nameСheck.test(name) || name.length<3){
+      document.getElementById('userName').classList.add('noValid');
+      document.getElementById('nameValid').innerText = "Введите свое имя";
+    }else{
+      document.getElementById('userName').classList.remove('noValid');
+      document.getElementById('nameValid').innerText = "";
+    }
+
+    // Проверка телефона
+      if(!phСheck.test(phone)){
+       document.getElementById('userTel').classList.add('noValid');
+        document.getElementById('phoneValid').innerText = "Введите свой телефон";
+      }else{
+        document.getElementById('userTel').classList.remove('noValid');
+        document.getElementById('phoneValid').innerText = "";
+
+        document.getElementById('formApplication').submit();
+      }
 });

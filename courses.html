@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>404</title>
+  <title>Курсы</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
@@ -33,8 +33,8 @@
                 <span></span>
               </div>
 
-              <li><a class="menu_link active" href="index.html">Главная</a></li>
-              <li><a class="menu_link" href="#">Курсы</a>
+              <li><a class="menu_link" href="index.html">Главная</a></li>
+              <li><a class="menu_link active" href="courses.html">Курсы</a>
 
                 <ul class="sub-menu_list">
                   <li><a class="sub-menu_link" href="#">Базовые</a></li>
@@ -43,7 +43,7 @@
                 </ul>
 
               </li>
-              <li><a class="menu_link" href="#">О нас</a></li>
+              <li><a class="menu_link  " href="about.html">О нас</a></li>
 
             </ul>
           </nav>
@@ -87,12 +87,45 @@
     <div class="wrapper">
       <div class="main2">
         <section class="main_info">
-          <div class="info_box">
-            <h1>Ошибка 404</h1>
-            <h3>Перейдите на главную страницу</h3>
-            <a href="#">Курсы ланшафтного дизайна</a>
 
-          </div>
+            <h1 class="_anim-items _anim-no-hide">Курсы</h1>
+            <h3 class="_anim-items _anim-no-hide">Тарифы</h3>
+
+
+
+
+          <div class="tab_courses">
+            <div class="flex">
+
+                         <div class="tablink" onclick="openPage('Home', this, '#554c4a')">Бесплатно</div>
+                         <div class="tablink" onclick="openPage('News', this, '#554c4a')" id="defaultOpen">Эконом</div>
+                         <div class="tablink" onclick="openPage('Contact', this, '#554c4a')">Люкс</div>
+            </div>
+
+
+
+            <div class="tab_content">
+              <div id="Home" class="tabcontent">
+                <h3>Бесплатно</h3>
+                <p></p>
+              </div>
+
+             <div id="News" class="tabcontent">
+               <h3>Эконом</h3>
+               <p></p>
+             </div>
+
+            <div id="Contact" class="tabcontent">
+              <h3>Люкс</h3>
+              <p></p>
+            </div>
+            </div>
+
+
+
+
+
+
 
 
         </section>
@@ -111,7 +144,7 @@
             <h3>Меню</h3>
             <ul class="footer_menu_list">
               <li><a class="footer_menu_link " href="index.html">Главная</a></li>
-              <li><a class="footer_menu_link " href="#">Курсы</a></li>
+              <li><a class="footer_menu_link " href="courses.html">Курсы</a></li>
               <li><a class="footer_menu_link" href="about.html">О нас</a></li>
 
             </ul>

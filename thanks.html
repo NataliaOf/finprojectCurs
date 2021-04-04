@@ -5,19 +5,168 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Отправка формы на почту </title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
   </head>
 
   <body>
-    <div class="container">
-
-      <h1 class="text-center">Спасибо!</h1>
-
+    <div class="preloader">
+      <div class="preloader_image"></div>
     </div>
+    <header class="header">
+
+          <div class="box-nav">
+
+            <div class="logo">
+              <a href="index.html">
+                <img src="images/logo.png" alt="logo">
+                <!-- <span class="logo">Logo</span> -->
+
+              </a>
+
+            </div>
+
+            <nav class="menu">
+              <ul class="menu_list">
+                <div class="burger">
+                  <span></span>
+                </div>
+
+                <li><a class="menu_link active" href="index.html">Главная</a></li>
+                <li><a class="menu_link" href="#">Курсы</a>
+
+                  <ul class="sub-menu_list">
+                    <li><a class="sub-menu_link" href="#">Базовые</a></li>
+                    <li><a class="sub-menu_link" href="#">Эконом</a></li>
+                    <li><a class="sub-menu_link" href="#">Люкс</a></li>
+                  </ul>
+
+                </li>
+                <li><a class="menu_link" href="#">О нас</a></li>
+
+              </ul>
+            </nav>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+            <div class="check-in">
+              <!-- <div id="theme" class="theme-switcher" >
+                <span>&#9728;</span>
+              </div> -->
+              <div id="regDiv"></div>
+              <button id="deliteUser">Выйти</button>
+              <div id="dialog-form">
+                <form id="formCheckIn" action="index.html" method="POST">
+                 <p class="validateTips">Заполните форму.</p>
+                   <label for="name">Имя</label><br>
+
+                   <input type="text" name="name" id="name" placeholder="Ваше имя"><br>
+                   <p id="usName"></p>
+                   <label for="email">Email</label><br>
+
+                   <input type="text" name="email" id="email" placeholder="Ваш email" ><br>
+                    <p id="usEmail"></p>
+                   <label for="password">Пароль</label><br>
+
+                   <input type="password" name="password" id="password" placeholder="Пароль"><br>
+                   <p id="usPassw"></p>
+                   <button  id="btnCheckIn" type="button" name="button">Отправить</button>
+                   <button id="clear" type="button" name="button">Очистить</button>
+                   <button type="button" name="button" id="close">Закрыть</button>
+
+               </form>
+             </div>
+             <div id="regDiv"></div>
+             <button id="createUser">Регистрация</button>
+          </div>
+        </div>
+
+
+    </header>
+    <main>
+      <div class="wrapper">
+        <div class="main2">
+          <section class="main_info">
+            <div class="info_box">
+              <h1 class="_anim-items _anim-no-hide">Спасибо за заявку. Ждите звонка</h1>
+              <h3>Перейдите на главную страницу</h3>
+              <a href="#">Курсы ланшафтного дизайна</a>
+
+            </div>
+
+
+          </section>
+        </div>
+
+      </main>
+      <footer class="footer">
+        <div class="wrapper">
+          <div class="wrapper_foorer">
+            <div class="logo_footer">
+                <img src="images/logo.png" alt="logo">
+              <span>Курсы ландшафтного дизайна</span>
+            </div>
+            <div class="footer_menu">
+              <h3>Меню</h3>
+              <ul class="footer_menu_list">
+                <li><a class="footer_menu_link " href="index.html">Главная</a></li>
+                <li><a class="footer_menu_link " href="#">Курсы</a></li>
+                <li><a class="footer_menu_link" href="about.html">О нас</a></li>
+
+              </ul>
+              </div>
+              <div class="footer_curses">
+                <h3>Тарифы курсов</h3>
+                <ul class="footer_curses_list">
+                  <li><a class="footer_menu_link " href="#">Бесплатно</a></li>
+                  <li><a class="footer_menu_link " href="#">Эконом</a></li>
+                  <li><a class="footer_menu_link" href="#">Люкс</a></li>
+
+                </ul>
+              </div>
+              <div class="footr_social">
+                <h3>Мы в соцсетях</h3>
+                <div class="social_logo">
+                  <a href="#"><img src="images/facebook-logo.png" alt="facebook"></a><br>
+                  <a href="#"><img src="images/instagram-logo.png" alt="Instagram"></a><br>
+                  <a href="#"><img src="images/youtube-logo.png" alt="youtube"></a><br>
+                </div>
+              </div>
+
+          </div>
+          <div class="autor">
+            <h3>&copy;Natalija Oficerova, 2021г</h3>
+          </div>
+        </div>
+      </footer>
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="js/slick.min.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/form.js"></script>
+      <script>
+
+
+
+      $( function() {
+
+
+        /// Бургер
+        $('.burger').click(function(){
+          // открываю, закрываю меню
+          console.log("меню");
+          $('.burger, .menu_list').toggleClass('activMob');
+          // Запрещаю скрод страницы при открытом меню
+          $('body').toggleClass('lock');
+        });
+
+
+
+      } );
+      </script>
   </body>
 </html>
