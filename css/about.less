@@ -28,6 +28,13 @@
   opacity: 1;
 }
 
+.animNone(){
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+//****************************************************
+
 .main2{
   margin-top: -500px;
   padding-bottom: 200px;
@@ -48,16 +55,17 @@
     }
   }
 }
+h2{
+    .anim-show();
+    transition: all 2.2s ease 0s;
+
+    &._active{
+      .active();
+    }
+}
 
 .teachers{
-  h2{
-      .anim-show();
-      transition: all 2.2s ease 0s;
 
-      &._active{
-        .active();
-      }
-  }
   width: 90%;
   .wrapper_teachers{
       .flex();
@@ -76,7 +84,7 @@
           border-radius:50%;
         }
         .anim-show();
-        transition: all 1s ease 0s;
+        transition: all 2s ease 0s;
 
           &._active{
           .active();
@@ -201,6 +209,38 @@ section.reviews{
   }
 
 
+  //стили аккардеона
+  section.questions{
+    padding: 30px;
+  }
+  .accordion {
+    background-color: #605757;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    // transition: 0.4s;
+    .anim-show();
+      transition: all 2s ease 0s;
+
+      &._active{
+        .active();
+      }
+}
+.activee, .accordion:hover {
+    background-color: #554c4a;
+}
+.panel {
+    padding: 10px 18px;
+    background-color: #6b6464;
+    display: none;
+    overflow: hidden;
+}
+
+
 
 // Стили страницы курсов
 
@@ -223,6 +263,8 @@ section.reviews{
     }
 
 }
+
+// Стили вкладок курсов
 .tab_courses {
     height: 100%;
     margin: 0;
@@ -235,7 +277,7 @@ section.reviews{
     }
 }
 
-/* Style tab links */
+
 .tablink {
     background-color: inherit;
     color: white;
@@ -247,21 +289,35 @@ section.reviews{
     padding: 14px 16px;
     font-size: 17px;
     width: 25%;
-    // margin-bottom: 20px;
-    // &:hover{
-    //   background-color: #777;
-    // }
+
 }
 
 
 
-/* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-    color: white;
     display: none;
     padding: 100px 20px;
     height: 100%;
-    text-align: center;
+    p.animNone{
+      margin-bottom: 20px;
+    .animNone();
+    span{
+      color:red;
+    }
+    }
+    h2.animNone{
+      margin-bottom: 20px;
+      .animNone();
+
+    }
+    ul{
+       margin-bottom: 30px;
+      li{
+        margin-bottom: 10px;
+        color:@colorP;
+      }
+    }
+
 }
 
 #Home {background-color:  #554c4a;}

@@ -148,7 +148,7 @@ function checkReg() {
            cookieObject[c[0]] = c[1];
         }
         if('register' in cookieObject && 'regEmail' in cookieObject && 'regPass' in cookieObject ) {
-        	divOut.innerHTML = "Hello, " + cookieObject['register'];
+        	divOut.innerHTML =  cookieObject['register'];
 
             var btn = document.getElementById("createUser");
             var btn1 = document.getElementById("deliteUser");

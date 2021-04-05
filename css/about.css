@@ -16,17 +16,17 @@
   transform: translate(0, 0);
   opacity: 1;
 }
-.teachers {
-  width: 90%;
-}
-.teachers h2 {
+h2 {
   transform: translate(0, 120%);
   opacity: 0.5;
   transition: all 2.2s ease 0s;
 }
-.teachers h2._active {
+h2._active {
   transform: translate(0, 0);
   opacity: 1;
+}
+.teachers {
+  width: 90%;
 }
 .teachers .wrapper_teachers {
   display: flex;
@@ -46,7 +46,7 @@
   margin-bottom: 20px;
   transform: translate(0, 120%);
   opacity: 0.5;
-  transition: all 1s ease 0s;
+  transition: all 2s ease 0s;
 }
 .teachers .wrapper_teachers .teacher .teacher_name img {
   width: 100px;
@@ -144,6 +144,36 @@ section.reviews {
 .slider .slick-arrow:focus {
   background: inherit;
 }
+section.questions {
+  padding: 30px;
+}
+.accordion {
+  background-color: #605757;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transform: translate(0, 120%);
+  opacity: 0.5;
+  transition: all 2s ease 0s;
+}
+.accordion._active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.activee,
+.accordion:hover {
+  background-color: #554c4a;
+}
+.panel {
+  padding: 10px 18px;
+  background-color: #6b6464;
+  display: none;
+  overflow: hidden;
+}
 .main_info h1 {
   transform: translate(0, 120%);
   opacity: 0.5;
@@ -175,7 +205,6 @@ section.reviews {
   background-color: #555;
   border-radius: 20px  20px 0 0;
 }
-/* Style tab links */
 .tablink {
   background-color: inherit;
   color: white;
@@ -188,13 +217,30 @@ section.reviews {
   font-size: 17px;
   width: 25%;
 }
-/* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  color: white;
   display: none;
   padding: 100px 20px;
   height: 100%;
-  text-align: center;
+}
+.tabcontent p.animNone {
+  margin-bottom: 20px;
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.tabcontent p.animNone span {
+  color: red;
+}
+.tabcontent h2.animNone {
+  margin-bottom: 20px;
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.tabcontent ul {
+  margin-bottom: 30px;
+}
+.tabcontent ul li {
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 #Home {
   background-color: #554c4a;
