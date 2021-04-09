@@ -18,7 +18,7 @@ $( function() {
   }, 20000);
 
 $('#deliteDivCookie').click(function(){
-$('#cookie').css({marginLeft: "-800px"})
+$('#cookie').css({marginLeft: "-1500px", opacity: "0"})
 })
 
 
@@ -124,7 +124,7 @@ for (i = 0; i < acc.length; i++) {
 
         this.classList.toggle("activee");
 
-      
+
         var panel = this.nextElementSibling;
         if (panel.style.display === "block") {
             panel.style.display = "none";

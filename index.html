@@ -20,10 +20,10 @@
           <div class="logo">
             <a href="index.html">
               <img src="images/logo.png" alt="logo">
-              <!-- <span class="logo">Logo</span> -->
+
 
             </a>
-
+             <span class="logoName">birch</span>
           </div>
 
           <nav class="menu">
@@ -37,8 +37,8 @@
 
                 <ul class="sub-menu_list">
                   <li><a class="sub-menu_link" href="#">Базовые</a></li>
-                  <li><a class="sub-menu_link" href="#">Эконом</a></li>
-                  <li><a class="sub-menu_link" href="#">Люкс</a></li>
+                  <li><a class="sub-menu_link" href="#">Базовый курс</a></li>
+                  <li><a class="sub-menu_link" href="#">Курс с практикой</a></li>
                 </ul>
 
               </li>
@@ -50,7 +50,7 @@
 
           <div class="check-in">
             <div id="regDiv"></div>
-            <button id="deliteUser">Выйти</button>
+
             <div id="dialog-form">
               <form id="formCheckIn" action="index.html" method="POST">
                <p class="validateTips">Заполните форму.</p>
@@ -74,6 +74,7 @@
            </div>
            <!-- <div id="regDiv"></div> -->
            <button id="createUser">Регистрация</button>
+           <button id="deliteUser">Выйти</button>
         </div>
       </div>
 
@@ -92,43 +93,50 @@
       <div class="main">
         <section class="main_info">
           <div class="info_box">
-           <h1 class="_anim-items _anim-no-hide">Курсы ланшафтного дизайна</h1>
+          <div class="contentName">
+            <h1 class="_anim-items _anim-no-hide">Курсы ланшафтного дизайна</h1>
 
-          <p class="_anim-items _anim-no-hide">
-            Профессия Ландшафтный дизайнер
-            Вы научитесь проектировать участки, сады и парки, создавать эскизы, чертежи и ландшафтные проекты в 3D — и точно попадать в желания заказчика. Соберёте портфолио и сможете работать в дизайн-студии или на фрилансе.
+           <p class="_anim-items _anim-no-hide">
+             Профессия Ландшафтный дизайнер
+             Вы научитесь проектировать участки, сады и парки, создавать эскизы, чертежи и ландшафтные проекты в 3D — и точно попадать в желания заказчика. Соберёте портфолио и сможете работать в дизайн-студии или на фрилансе.
 
-          </p>
-          <div class="contact _anim-items _anim-no-hide">
-            <a href="tel:+380958888888">Тел: +3 8(095)888-88-88</a><br><br>
-            <a href="mailto:nataliaof380@gmail.com">Задавайте вопросы по электронной почте</a>
+           </p>
+           <!-- <div class="contact _anim-items _anim-no-hide">
+             <h3>Контакты</h3>
+             <a href="tel:+380958888888">Тел: +3 8(095)888-88-88</a><br><br>
+             <a href="mailto:nataliaof380@gmail.com">nataliaof380@gmail.com</a>
+           </div> -->
           </div>
 
             <div class="content _anim-items _anim-no-hide">
-              <div class="plication-form _anim-items _anim-no-hide">
-                <h3>Оставьте заявку:</h3>
-                <form id="formApplication" action="telegram.php" method="POST" >
-
-                  <input id="userName" type="text" name="userName" placeholder="Ваше имя"><br>
-                  <p id="nameValid"></p><br>
-
-                  <input id="userTel" type="tel" name="userTel" placeholder="Ваш телефон"><br>
-                  <p id="phoneValid"></p><br>
-
-                </form>
-                <button id="applicationBtn" type="submit">Отправить</button>
-                <button id="clear2" type="submit">Очистить</button>
-              </div>
               <div class="video _anim-items _anim-no-hide">
 
-                <h3>Смотреть видео:</h3>
-                <button id="btnVideo" type="button" name="button">Видео</button>
+                <!-- <h3>Смотреть видео:</h3> -->
+                <div class="imgPlay">
+                  <img id="btnVideo"src="images/play.gif" alt="Включить видео">
+                </div>
+                <!-- <button id="btnVideo" type="button" name="button">Видео</button> -->
                 <!-- <img id="btnVideo"src="image/play.png" alt="Включить видео" width="100px"> -->
                 <div id="video">
                   <iframe  src="https://www.youtube.com/embed/3CSbre1Ptek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                 </div>
               </div>
+              <div class="plication-form _anim-items _anim-no-hide">
+                <h2>Записаться на курс:</h2>
+                <form id="formApplication" action="telegram.php" method="POST" >
+                  <p id="nameValid" class="validP"></p><br>
+                  <input id="userName" type="text" name="userName" placeholder="Ваше имя">
+                  <!-- <p id="nameValid" class="validP"></p><br> -->
+                  <p id="phoneValid"></p><br>
+                  <input id="userTel" type="tel" name="userTel" placeholder="Ваш телефон">
+
+
+                </form>
+                <button id="applicationBtn" type="submit">Отправить</button>
+                <button id="clear2" type="submit">Очистить</button>
+              </div>
+
             </div>
 
           </div>
@@ -211,7 +219,7 @@
       <div class="wrapper_foorer">
         <div class="logo_footer">
             <img src="images/logo.png" alt="logo">
-          <span>Курсы ландшафтного дизайна</span>
+            <span class="logoName">birch</span>
         </div>
         <div class="footer_menu">
           <h3>Меню</h3>
@@ -226,10 +234,15 @@
             <h3>Тарифы курсов</h3>
             <ul class="footer_curses_list">
               <li><a class="footer_menu_link " href="#">Бесплатно</a></li>
-              <li><a class="footer_menu_link " href="#">Эконом</a></li>
-              <li><a class="footer_menu_link" href="#">Люкс</a></li>
+              <li><a class="footer_menu_link " href="#">Базовый курс</a></li>
+              <li><a class="footer_menu_link" href="#">Курс с практикой</a></li>
 
             </ul>
+          </div>
+          <div class="contact">
+            <h3>Контакты</h3>
+            <a href="tel:+380958888888">Тел: +3 8(095)888-88-88</a><br><br>
+            <a href="mailto:nataliaof380@gmail.com">nataliaof380@gmail.com</a>
           </div>
           <div class="footr_social">
             <h3>Мы в соцсетях</h3>

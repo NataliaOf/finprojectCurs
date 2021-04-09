@@ -16,6 +16,7 @@ font-family: 'Russo One', sans-serif; */
 @fontP: 'Roboto Slab', serif;
 @colorH: #fff;
 @colorP: #fff;
+@bgBtn: #2d2828;
 @background1: linear-gradient(180deg, rgba(50, 42, 39, 0) 0%, rgba(45, 40, 40, 0.85) 33.85%, #2D2828 49.48%, #2D2828 68.75%, #2D2828 82.29%, #2D2828 100%);
 
 
@@ -29,6 +30,8 @@ font-family: 'Russo One', sans-serif; */
 .hover_div(){
     transform: scale(1.1);
 }
+
+
 
 // анимация
 .anim-show(){
@@ -109,8 +112,9 @@ a:active{
 }
 button{
   padding: 5px 10px;
-  border: 2px solid red;
-  border-radius: 20px;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  // border-radius: 20px;
   background-color: inherit;
   margin: 10px;
   cursor: pointer;
@@ -128,22 +132,25 @@ button:hover{
 button:active, button:focus{
   outline-offset: 0;
   outline: 0;
-  background-color: red;
+  background-color: @bgBtn;
 }
 
 input, textarea{
   padding: 5px 10px;
-  border: 2px solid #ccc;
-  border-radius: 20px;
+  border: 1px solid #fff;
+  // border-radius: 20px;
   background-color: inherit;
   margin: 10px;
+    font-size: 20px;
   &:active, &:hover, &:focus{
     outline-offset: 0;
     outline: 0;
   }
 
 }
-
+input::placeholder, textarea::placeholder{
+  color:#fff;
+}
 
 
 header{
@@ -178,15 +185,23 @@ footer{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  align-items:flex-start;
+  align-items:center;
   padding-top: 10px;
   z-index: 6;
   .logo{
-    width: 50px;
-    height: 50px;
+     .flex();
+      align-items: center;
+    // width: 50px;
+    // height: 50px;
     img{
-      width: 100%;
+      width: 50px;
       border-radius: 50%;
+      margin-right: 5px;
+    }
+    .logoName{
+        text-transform: uppercase;
+        color: #fff;
+
     }
   }
   nav.menu{
@@ -204,8 +219,10 @@ footer{
         display: block;
          transition: 1s;
          color:@colorP;
-
+         margin-bottom: 5px;
          margin-right:30px;
+         text-transform: uppercase;
+         font-size: 20px;
          &.active{
            color: #d4be34;
          }
@@ -228,23 +245,26 @@ footer{
     right: 40px;
     #dialog-form{
       display: none;
-      background-color: #554c4a;
+      background-color:@bgBtn;
       // border: 2px solid #362d5f;
       border: 1px solid rgba(255, 255, 255, 0.2);
 
       box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
       color: #fff;
-      border-radius: 20px;
+      // border-radius: 20px;
       padding: 20px;
       margin-left: 10px;
       position:fixed;
       z-index: 6;
       top: 30%;
       left: 35%;
-      width: 400px;
+      width: 40%;
       height: auto;
       .validateTips{
         margin-bottom: 10px;
+      }
+      p, label{
+        margin-left: 10px;
       }
     }
   }
@@ -256,19 +276,20 @@ footer{
   position: absolute;
   min-width: 100px;
   font-size: 18px;
-  line-height: 15px;
-
+  line-height: 25px;
+   background-color: rgba(22, 23, 22, 0.63);
+   text-transform: uppercase;
   .sub-menu_link{
     display: block;
     color:@colorP;
-    padding: 3px;
+    padding: 5px;
   }
 }
 
 main{
   position: relative;
   #cookie{
-    background-color: #554c4a;
+    background-color: @bgBtn;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
     color: #fff;
@@ -276,19 +297,20 @@ main{
     padding: 20px;
     text-align: center;
     width: 50%;
-    margin-left: -800px;
+    margin-left: -1500px;
     position: fixed;
     bottom: 0;
     left: 0;
     bottom: 50px;
     z-index: 10;
+    opacity: 1;
   }
 }
 
 .main{
 
   margin: auto;
-  margin-top: -700px ;
+  margin-top: -90vh ;
   padding: 20px;
 
   width: 100%;
@@ -309,72 +331,105 @@ main{
 
 
   .info_box{
-    width: 60%;
-    // border:2px solid red;
-    h1{
-      margin-top: 100px;
+      .flex();
+      align-items: center;
+      flex-wrap: wrap;
+      .contentName{
+        width: 50%;
+        margin-right: 10px;
+        h1{
+           margin-top: 50px;
+           .anim-show();
+           transition: all 2.5s ease 0s;
 
-
-      .anim-show();
-      transition: all 2.5s ease 0s;
-
-      &._active{
-        .active();
-      }
-    }
-    p{
-      .anim-show();
-         transition: all 2.8s ease 0s;
-
-       &._active{
-         .active();
-      }
-    }
-    .contact{
-
-      padding: 20px 0;
-      margin-bottom: 30px;
-      .anim-show();
-         transition: all 2.8s ease 0s;
-
-      &._active{
-        .active();
-      }
-    }
-
-     .content{
-       margin-bottom: 30px;
-       .flex();
-       align-items: flex-end;
-        position: relative;
-       .video{
-       border: 2px solid red;
-         #video{
-           padding: 50px ;
-           width: 100%;
-           height: 100%;
-           background: rgba(38, 22, 13, 0.7);
-           display: none;
-           position:fixed;
-           text-align: center;
-           z-index: 7;
-           top: 0;
-
-           left: 0;
-           iframe{
-             margin-top: 20%;
-             width: 60%;
-             height: 30vw;
+           &._active{
+             .active();
            }
-         }
-       }
-       // .anim-show();
-       //  transition: all 1.2s ease 0s;
-       //  &._active{
-       // .active();
-     // }
+        }
+        p{
+          .anim-show();
+             transition: all 2.8s ease 0s;
 
-     }
+           &._active{
+             .active();
+          }
+        }
+      }
+      .content{
+        .imgPlay{
+            width:150px;
+            height: 150px;
+            // border-radius: 50%;
+            // overflow: hidden;
+            margin-bottom: 30px;
+            margin: 10px auto;
+            // text-align: center;
+        }
+        img{
+
+          width: 150px;
+          // border-radius: 50%;
+        }
+
+          // margin-bottom: 30px;
+          // .flex();
+          // align-items: flex-end;
+           position: relative;
+          .video{
+
+            #video{
+              padding: 50px ;
+              width: 100%;
+              height: 100%;
+              background: rgba(38, 22, 13, 0.7);
+              display: none;
+              position:fixed;
+              text-align: center;
+              z-index: 7;
+              top: 0;
+
+              left: 0;
+              iframe{
+                margin-top: 20%;
+                width: 60%;
+                height: 30vw;
+              }
+            }
+          }
+          .plication-form{
+            h2{
+              margin-bottom: 0;
+            }
+            form{
+              // border: 2px solid red;
+              input{
+                font-size: 20px;
+                p.validP{
+                  margin-bottom:0;
+                }
+              }
+            }
+          }
+
+        }
+
+
+
+
+    // .contact{
+    //
+    //   padding: 20px 0;
+    //   margin-bottom: 30px;
+    //   .anim-show();
+    //      transition: all 2.8s ease 0s;
+    //
+    //   &._active{
+    //     .active();
+    //   }
+    // }
+    //
+
+    //  }
 
   }
   .social{
@@ -383,6 +438,7 @@ main{
 }
 
 .skills{
+  padding: 30px;
   h2{
     .anim-show();
       transition: all 1.2s ease 0s;
@@ -401,11 +457,11 @@ main{
       padding: 10px;
       border: 1px solid rgba(255, 255, 255, 0.2);
       box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
-      cursor: pointer;
+      // cursor: pointer;
       transition: 0.5s;
-      &:hover{
-        .hover_div;
-      }
+      // &:hover{
+      //   .hover_div;
+      // }
       img{
         width: 100%;
       }
@@ -423,7 +479,7 @@ main{
 
 .gallery{
 width: 100%;
-
+padding: 30px;
   .greed_box{
 
     display:grid;
@@ -489,16 +545,25 @@ footer{
   // background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000000 100%), #C4C4C4;
   // background-size: cover;
   box-shadow: 0px -20px 8px -5px rgba(0, 0, 0, 0.37);
-  background: url(../images/bg-f.jpg) ;
+  // background: url(../images/bg-f.jpg) ;
+  background-color:@bgBtn;
   .wrapper_foorer{
     padding: 20px 0;
     .flex();
-  color: #000;
+  color: #fff;
   .logo_footer{
     width: 100px;
     img{
       width: 100%;
       border-radius: 50%;
+      margin-bottom: 5px;
+    }
+    .logoName{
+
+      text-transform: uppercase;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
     }
   }
 
@@ -521,7 +586,7 @@ footer{
     padding: 10px;
     margin: 0 auto;
     h3{
-      color: #000;
+      color: #fff;
 
       margin-bottom: 0;
     }
@@ -530,11 +595,11 @@ footer{
 
     padding: 5px 0;
      a{
-      color: #000;
+      color: #fff;
     }
   }
   h3{
-    color: #000;
+    color: #fff;
     font-weight: bold;
   }
 }
@@ -547,8 +612,12 @@ footer{
 #usName, #usEmail, #usPassw{
   color:red;
   font-size: 14px;
+  // margin-top:-30px;
 }
-
+.error{
+  color:#795e07;
+  font-size: 35px;
+}
 
 /* Прелоадер */
 .preloader{
