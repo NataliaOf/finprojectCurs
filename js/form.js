@@ -1,9 +1,4 @@
-// console.log(document.getElementById("applicationBtn"));
 
-
-
-
-console.log(document.getElementById("btnCheckIn"));
 // Проверка регистрации
 
 let btnCheckIn = document.getElementById("btnCheckIn");

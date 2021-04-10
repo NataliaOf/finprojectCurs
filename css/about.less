@@ -1,8 +1,10 @@
 // *****Переменные******
 @fontH: 'Inter', sans-serif;
 @fontP: 'Roboto Slab', serif;
-@colorH: #fff;
+@colorH: #dba51d;
 @colorP: #fff;
+@bgBtn: #2d2828;
+@bgDiv: #8b8383;
 @background1: linear-gradient(180deg, rgba(50, 42, 39, 0) 0%, rgba(45, 40, 40, 0.85) 33.85%, #2D2828 49.48%, #2D2828 68.75%, #2D2828 82.29%, #2D2828 100%);
 
 
@@ -36,7 +38,7 @@
 //****************************************************
 
 .main2{
-  margin-top: -500px;
+  margin-top: -90vh ;
   padding-bottom: 200px;
   position: relative;
   z-index: 5;
@@ -106,11 +108,11 @@ section.reviews{
  .slider{
    .slider_item{
 
-     background-color: #554c4a;
+     background-color: @bgDiv;
      border: 1px solid rgba(255, 255, 255, 0.2);
      // box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
      color: #fff;
-     border-radius: 20px;
+     // border-radius: 20px;
      padding: 20px;
      // text-align: center;
      margin-right: 10px;
@@ -175,7 +177,7 @@ section.reviews{
 .slider .slick-dots li{}
 /* Активная точка */
 .slider .slick-dots li.slick-active button{
-  background-color: red;
+  background-color: @colorH;
 }
 /* Элемент точки */
 .slider .slick-dots li button{
@@ -214,7 +216,7 @@ section.reviews{
     padding: 30px;
   }
   .accordion {
-    background-color: #605757;
+    background-color: @bgDiv;
     color: #fff;
     cursor: pointer;
     padding: 18px;
@@ -272,16 +274,16 @@ section.reviews{
     z-index: 6;
     .flex{
        .flex();
-         background-color: #555;
-        border-radius: 20px  20px 0 0;
+         background-color: @bgDiv;
+        // border-radius: 20px  20px 0 0;
     }
 }
 
 
 .tablink {
-    background-color: inherit;
+    background-color:@bgDiv;
     color: white;
-    border-radius: 20px  20px 0 0;
+    // border-radius: 20px  20px 0 0;
     text-align: center;
     border: none;
     outline: none;
@@ -302,7 +304,7 @@ section.reviews{
       margin-bottom: 20px;
     .animNone();
     span{
-      color:red;
+      color:@colorH;
     }
     }
     h2.animNone{
@@ -315,14 +317,80 @@ section.reviews{
       li{
         margin-bottom: 10px;
         color:@colorP;
+          line-height: 30px;
+
+      }
+      li::before{
+        content: "";
+        display: inline-block;
+        margin-bottom: -5px;
+
+        width: 30px;
+        height: 30px;
+        background: url("../images/check.png");
+        background-size: 30px 30px;
       }
     }
 
 }
 
-#Home {background-color:  #554c4a;}
-#News {background-color: #554c4a;}
-#Contact {background-color: #554c4a;}
+.wrapper_cours{
+  .flex();
+  .info_cours{
+    width: 50%;
+    margin-right: 20px;
+  }
+  .form_cours{
+    width: 45%;
+  }
+}
+
+section.comments{
+  width: 100%;
+  padding: 30px;
+  .article{
+    // background-color: @bgDiv;
+    margin-bottom: 30px;
+    padding: 10px;
+    border-bottom: 2px solid #605e5e;
+  }
+  .comment{
+    margin-bottom: 30px;
+    padding: 10px;
+    border-bottom: 2px solid #605e5e;
+    span{
+      color:#8e9391;
+    }
+    p{
+
+      margin: 10px 0;
+    }
+  }
+  .comment-add{
+    span{
+      color: @colorP;
+    }
+    textarea{
+      width: 80%;
+    }
+  }
+
+}
+
+
+//**********стили ошибка*******
+
+.errorInfo{
+  text-align: center;
+  img{
+    margin-top: 30px;
+    width: 40%;
+  }
+}
+
+#Home {background-color: @bgBtn;}
+#News {background-color: @bgBtn;}
+#Contact {background-color: @bgBtn;}
 
 @media screen and (max-width:600px){
   .tab_courses .flex{

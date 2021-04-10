@@ -63,7 +63,7 @@ h1,
 h2,
 h3 {
   font-family: 'Inter', sans-serif;
-  color: #ffffff;
+  color: #dba51d;
   font-style: normal;
   font-weight: normal;
   margin-bottom: 30px;
@@ -133,6 +133,7 @@ input,
 textarea {
   padding: 5px 10px;
   border: 1px solid #fff;
+  color: #ffffff;
   background-color: inherit;
   margin: 10px;
   font-size: 20px;
@@ -234,13 +235,12 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
   color: #fff;
-  padding: 20px;
+  padding: 20px 70px;
   margin-left: 10px;
   position: fixed;
   z-index: 6;
   top: 30%;
   left: 35%;
-  width: 40%;
   height: auto;
 }
 .box-nav .check-in #dialog-form .validateTips {
@@ -272,7 +272,6 @@ main #cookie {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
   color: #fff;
-  border-radius: 20px;
   padding: 20px;
   text-align: center;
   width: 50%;
@@ -353,7 +352,7 @@ main #cookie {
   left: 0;
 }
 .main_info .info_box .content .video #video iframe {
-  margin-top: 20%;
+  margin-top: 10%;
   width: 60%;
   height: 30vw;
 }
@@ -404,6 +403,7 @@ main #cookie {
 }
 .skills .wrapper_srills .skills_info img {
   width: 100%;
+  margin-bottom: 20px;
 }
 .skills .wrapper_srills .skills_info._active {
   transform: translate(0, 0);
@@ -528,7 +528,12 @@ footer h3 {
 #phoneValid,
 #usName,
 #usEmail,
-#usPassw {
+#usPassw,
+#yourNameValid1,
+#yourPhoneValid1,
+#yourNameValid2,
+#yourPhoneValid2,
+#commentValid {
   color: red;
   font-size: 14px;
 }

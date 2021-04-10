@@ -14,7 +14,7 @@ font-family: 'Russo One', sans-serif; */
 // *****Переменные******
 @fontH: 'Inter', sans-serif;
 @fontP: 'Roboto Slab', serif;
-@colorH: #fff;
+@colorH: #dba51d;
 @colorP: #fff;
 @bgBtn: #2d2828;
 @background1: linear-gradient(180deg, rgba(50, 42, 39, 0) 0%, rgba(45, 40, 40, 0.85) 33.85%, #2D2828 49.48%, #2D2828 68.75%, #2D2828 82.29%, #2D2828 100%);
@@ -138,7 +138,7 @@ button:active, button:focus{
 input, textarea{
   padding: 5px 10px;
   border: 1px solid #fff;
-  // border-radius: 20px;
+  color: @colorP;
   background-color: inherit;
   margin: 10px;
     font-size: 20px;
@@ -252,13 +252,13 @@ footer{
       box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
       color: #fff;
       // border-radius: 20px;
-      padding: 20px;
+      padding: 20px 70px;
       margin-left: 10px;
       position:fixed;
       z-index: 6;
       top: 30%;
       left: 35%;
-      width: 40%;
+      // width: 40%;
       height: auto;
       .validateTips{
         margin-bottom: 10px;
@@ -293,7 +293,7 @@ main{
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
     color: #fff;
-    border-radius: 20px;
+    // border-radius: 20px;
     padding: 20px;
     text-align: center;
     width: 50%;
@@ -390,7 +390,7 @@ main{
 
               left: 0;
               iframe{
-                margin-top: 20%;
+                margin-top: 10%;
                 width: 60%;
                 height: 30vw;
               }
@@ -464,6 +464,7 @@ main{
       // }
       img{
         width: 100%;
+        margin-bottom: 20px;
       }
       .anim-show();
         transition: all 0.8s ease 0s;
@@ -609,10 +610,13 @@ footer{
   background-color: red;
 }
 #nameValid, #phoneValid,
-#usName, #usEmail, #usPassw{
+#usName, #usEmail, #usPassw,
+#yourNameValid1, #yourPhoneValid1,
+#yourNameValid2, #yourPhoneValid2,
+#commentValid {
   color:red;
   font-size: 14px;
-  // margin-top:-30px;
+
 }
 .error{
   color:#795e07;

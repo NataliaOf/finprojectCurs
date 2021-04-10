@@ -1,5 +1,5 @@
 .main2 {
-  margin-top: -500px;
+  margin-top: -90vh;
   padding-bottom: 200px;
   position: relative;
   z-index: 5;
@@ -65,10 +65,9 @@ section.reviews {
   padding: 30px;
 }
 .slider .slider_item {
-  background-color: #554c4a;
+  background-color: #8b8383;
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
-  border-radius: 20px;
   padding: 20px;
   margin-right: 10px;
 }
@@ -116,7 +115,7 @@ section.reviews {
 }
 /* Активная точка */
 .slider .slick-dots li.slick-active button {
-  background-color: red;
+  background-color: #dba51d;
 }
 /* Элемент точки */
 .slider .slick-dots li button {
@@ -148,7 +147,7 @@ section.questions {
   padding: 30px;
 }
 .accordion {
-  background-color: #605757;
+  background-color: #8b8383;
   color: #fff;
   cursor: pointer;
   padding: 18px;
@@ -202,13 +201,11 @@ section.questions {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: #555;
-  border-radius: 20px  20px 0 0;
+  background-color: #8b8383;
 }
 .tablink {
-  background-color: inherit;
+  background-color: #8b8383;
   color: white;
-  border-radius: 20px  20px 0 0;
   text-align: center;
   border: none;
   outline: none;
@@ -228,7 +225,7 @@ section.questions {
   opacity: 1;
 }
 .tabcontent p.animNone span {
-  color: red;
+  color: #dba51d;
 }
 .tabcontent h2.animNone {
   margin-bottom: 20px;
@@ -241,15 +238,70 @@ section.questions {
 .tabcontent ul li {
   margin-bottom: 10px;
   color: #ffffff;
+  line-height: 30px;
+}
+.tabcontent ul li::before {
+  content: "";
+  display: inline-block;
+  margin-bottom: -5px;
+  width: 30px;
+  height: 30px;
+  background: url("../images/check.png");
+  background-size: 30px 30px;
+}
+.wrapper_cours {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.wrapper_cours .info_cours {
+  width: 50%;
+  margin-right: 20px;
+}
+.wrapper_cours .form_cours {
+  width: 45%;
+}
+section.comments {
+  width: 100%;
+  padding: 30px;
+}
+section.comments .article {
+  margin-bottom: 30px;
+  padding: 10px;
+  border-bottom: 2px solid #605e5e;
+}
+section.comments .comment {
+  margin-bottom: 30px;
+  padding: 10px;
+  border-bottom: 2px solid #605e5e;
+}
+section.comments .comment span {
+  color: #8e9391;
+}
+section.comments .comment p {
+  margin: 10px 0;
+}
+section.comments .comment-add span {
+  color: #ffffff;
+}
+section.comments .comment-add textarea {
+  width: 80%;
+}
+.errorInfo {
+  text-align: center;
+}
+.errorInfo img {
+  margin-top: 30px;
+  width: 40%;
 }
 #Home {
-  background-color: #554c4a;
+  background-color: #2d2828;
 }
 #News {
-  background-color: #554c4a;
+  background-color: #2d2828;
 }
 #Contact {
-  background-color: #554c4a;
+  background-color: #2d2828;
 }
 @media screen and (max-width: 600px) {
   .tab_courses .flex {

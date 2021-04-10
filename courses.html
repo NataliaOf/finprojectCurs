@@ -37,9 +37,9 @@
               <li><a class="menu_link active" href="courses.html">Курсы</a>
 
                 <ul class="sub-menu_list">
-                  <li><a class="sub-menu_link" href="#">Базовые</a></li>
-                  <li><a class="sub-menu_link" href="#">Базовый курс</a></li>
-                  <li><a class="sub-menu_link" href="#">Курс с практикой</a></li>
+                  <li><a class="sub-menu_link" href="free.html">Бесплатный курс</a></li>
+                  <li><a class="sub-menu_link" href="basic.html">Базовый курс</a></li>
+                  <li><a class="sub-menu_link" href="practice_course.html">Курс с практикой</a></li>
                 </ul>
 
               </li>
@@ -87,21 +87,14 @@
 
             <h1 class="_anim-items _anim-no-hide">Курсы</h1>
             <h3 class="_anim-items _anim-no-hide">Тарифы</h3>
-
-
-
-
           <div class="tab_courses">
             <div class="flex">
 
-                         <div class="tablink" onclick="openPage('Home', this, '#554c4a')">Бесплатно</div>
-                         <div class="tablink" onclick="openPage('News', this, '#554c4a')" id="defaultOpen">Базовый курс</div>
-                         <div class="tablink" onclick="openPage('Contact', this, '#554c4a')">Курс с практикой</div>
+             <div class="tablink" onclick="openPage('Home', this, '#2d2828')">Бесплатно</div>
+              <div class="tablink" onclick="openPage('News', this, '#2d2828')" id="defaultOpen">Базовый курс</div>
+              <div class="tablink" onclick="openPage('Contact', this, '#2d2828')">Курс с практикой</div>
             </div>
-
-
-
-            <div class="tab_content">
+         <div class="tab_content">
               <div id="Home" class="tabcontent">
                 <h2 class="animNone">Бесплатно</h2>
                 <p class="animNone">
@@ -117,83 +110,133 @@
                   <li>Узнаете о стилях оформления участка.</li>
                 </ul>
 
-                  <button type="button" name="button">Начать обучение</button>
+                  <a href="free.html"><button type="button"  name="button">Начать обучение</button></a>
               </div>
 
              <div id="News" class="tabcontent">
-               <h2 class="animNone">Базовый курс</h2>
-               <p class="animNone">
-                 Этот курс даст вам все знания по профессии. <br>
-                 Вы получите всю теоретическую программу обучения.<br>
-                 А вот практика будет зависить только от вас.
-               </p>
-               <h2 class="animNone">Преимущества этого курса</h2>
-               <ul>
-                 <li>Приятная цена</li>
-                 <li>Вы получите всю теорию, которую должен сзать ландшафтный дизфйнер</li>
-                 <li>Обучение проходит в онлайн режиме, в удобное для вас время</li>
-                 <li>Материаля останутся с вами на всегда </li>
-                 <li>Два раза в неденю он лайн уроки с нашими преподавателями, которые ответят на ваши вопросы</li>
+              <div class="wrapper_cours">
+                <div class="info_cours">
+                  <h2 class="animNone">Базовый курс</h2>
+                  <p class="animNone">
+                    Этот курс даст вам все знания по профессии. <br>
+                    Вы получите всю теоретическую программу обучения.<br>
+                    А вот практика будет зависить только от вас.
+                  </p>
+                  <h2 class="animNone">Преимущества этого курса</h2>
+                  <ul>
+                    <li>Приятная цена</li>
+                    <li>Вы получите всю теорию, которую должен сзать ландшафтный дизфйнер</li>
+                    <li>Обучение проходит в онлайн режиме, в удобное для вас время</li>
+                    <li>Материаля останутся с вами на всегда </li>
+                    <li>Два раза в неденю он лайн уроки с нашими преподавателями, которые ответят на ваши вопросы</li>
 
-               </ul>
+                  </ul>
+                </div>
 
-               <p class="animNone">
-                 Стоимость курса <span>4000 грн</span><br>
-                 Длительность <span>6 месяцев.</span>
-               </p>
-               <form action="" method="POST">
-                 <input type="text" name="yourName" placeholder="Введите ваше имя"><br>
-                 <input type="tel" name="yourPhone" placeholder="Введите номер телефона"><br>
-                 <textarea name="commit" placeholder="Дополнение"></textarea><br>
-                 <button type="button" name="button">Отправить</button>
+                <div class="form_cours">
 
+                    <p class="animNone">
+                     Стоимость курса <span>4000 грн</span><br>
+                     Длительность <span>6 месяцев.</span>
+                   </p>
+                   <form id="payСourse1" action="telegram1.php" method="POST">
+                     <p id="yourNameValid1" class="yourName"></p><br>
+                     <input type="text" id="yourName1" name="yourName" placeholder="Введите ваше имя"><br>
+                      <p id="yourPhoneValid1" class="yourPhone"></p><br>
+                     <input type="tel" id="yourPhone1" name="yourPhone" placeholder="Введите номер телефона"><br>
+                     <textarea name="commit"  placeholder="Дополнение"></textarea><br>
+                     <button type="button" id="payBtn1" name="button">Отправить</button>
+                     <button type="button" id="clearCours1">Очистить</button>
 
-               </form>
+                   </form>
+                </div>
+              </div>
              </div>
 
             <div id="Contact" class="tabcontent">
-              <h2 class="animNone">Курс с практикой</h2>
-              <p class="animNone">
-                На этом курсе вы получите не только теорию, но и практику.<br>
-                Практика проходит в нашем центре, а в конце обучения, вы сможите
-                 принять участие в настоящем проекте.
-              </p>
-              <h2 class="animNone">Преимущества этого курса</h2>
-              <ul>
-                <li>Теория, закрепленная практикой</li>
-                <li>Теоретические занятия проходят онлайн в удобное для вас время</li>
-                <li>Практические занятия проходят у нас в центре, все материалы и инструменты мы вам предоставим</li>
-                <li>Материаля останутся с вами на всегда </li>
-                <li>Чат группа в телеграмм канале, где вы можите задавать свои вопросы</li>
-                <li>Вы увидите все этары работы на реальном проекте</li>
-                <li>В конце обучения мы поможем вам составить резюме и портфолио</li>
+              <div class="wrapper_cours">
+                <div class="info_cours">
+                  <h2 class="animNone">Курс с практикой</h2>
+                  <p class="animNone">
+                    На этом курсе вы получите не только теорию, но и практику.<br>
+                    Практика проходит в нашем центре, а в конце обучения, вы сможите
+                     принять участие в настоящем проекте.
+                  </p>
+                  <h2 class="animNone">Преимущества этого курса</h2>
+                  <ul>
+                    <li>Теория, закрепленная практикой</li>
+                    <li>Теоретические занятия проходят онлайн в удобное для вас время</li>
+                    <li>Практические занятия проходят у нас в центре, все материалы и инструменты мы вам предоставим</li>
+                    <li>Материаля останутся с вами на всегда </li>
+                    <li>Чат группа в телеграмм канале, где вы можите задавать свои вопросы</li>
+                    <li>Вы увидите все этары работы на реальном проекте</li>
+                    <li>В конце обучения мы поможем вам составить резюме и портфолио</li>
 
-              </ul>
+                  </ul>
 
-              <p class="animNone">
-                Стоимость курса <span>10000 грн</span><br>
-                Длительность <span> 9 месяцев.</span>
-              </p>
-              <form action="" method="POST">
-                <input type="text" name="yourName" placeholder="Введите ваше имя"><br>
-                <input type="tel" name="yourPhone" placeholder="Введите номер телефона"><br>
-                <textarea name="commit" placeholder="Дополнение"></textarea><br>
-                <button type="button" name="button">Отправить</button>
+                </div>
+
+                <div class="form_cours">
+
+                  <p class="animNone">
+                    Стоимость курса <span>10000 грн</span><br>
+                    Длительность <span> 9 месяцев.</span>
+                  </p>
+                  <form id="payСourse2" action="telegram2.php" method="POST">
+                    <p id="yourNameValid2" class="yourName"></p><br>
+                    <input type="text" id="yourName2" name="yourName" placeholder="Введите ваше имя"><br>
+                    <p id="yourPhoneValid2" class="yourName"></p><br>
+                    <input type="tel" id="yourPhone2" name="yourPhone" placeholder="Введите номер телефона"><br>
+                    <textarea name="commit" placeholder="Дополнение"></textarea><br>
+                    <button type="button" id="payBtn2" name="button">Отправить</button>
+                    <button  type="button" id="clearCours2">Очистить</button>
 
 
-              </form>
+                  </form>
+                </div>
+              </div>
+
+
             </div>
             </div>
+          </div>
+       </section>
 
+       <section class="comments">
 
+           <!-- <div class="comment"> -->
+             <div class="article">
+               <h2 class="_anim-items _anim-no-hide">Комментарии</h2>
+               <p >
+                 Ваш коментарий будет добавлен после модерации.
+               </p>
+             </div>
 
+             <div id="comments">
+               <div class="comment">
+                 <h3>Наталья</h3>
+                 <span>20.02.2021</span>
+                 <p>
+                   Вы лучшие. На занятихч дается очень много теории. А на практике она закрепляется, что дает отличный результат.
+                 </p>
+               </div>
+             </div>
 
+             <div class="comment-add">
+               <h3>Оставьте свой комментарий</h3>
+               <p id="commentValid" class="commentValid"></p>
+               <span>Имя:</span>
+               <input id="nameCom" type="text" >
+             <br>
+               <span>Комментарий:</span><br>
+                 <textarea id="comment" name="name" rows="4" cols="60"></textarea>
+               <br>
+               <button id="btnCom" type="submit" name="button">Добавить комментарий</button>
+             </div>
+           <!-- </div> -->
 
+       </section>
 
-
-
-        </section>
-      </div>
 
     </main>
 
@@ -217,8 +260,8 @@
               <h3>Тарифы курсов</h3>
               <ul class="footer_curses_list">
                 <li><a class="footer_menu_link " href="#">Бесплатно</a></li>
-                <li><a class="footer_menu_link " href="#">Базовый курс</a></li>
-                <li><a class="footer_menu_link" href="#">Курс с практикой</a></li>
+                <li><a class="footer_menu_link " href="basic.html">Базовый курс</a></li>
+                <li><a class="footer_menu_link" href="practice_course.html">Курс с практикой</a></li>
 
               </ul>
             </div>
@@ -230,9 +273,9 @@
             <div class="footr_social">
               <h3>Мы в соцсетях</h3>
               <div class="social_logo">
-                <a href="#"><img src="images/facebook-logo.png" alt="facebook"></a><br>
-                <a href="#"><img src="images/instagram-logo.png" alt="Instagram"></a><br>
-                <a href="#"><img src="images/youtube-logo.png" alt="youtube"></a><br>
+                <a href="#"><img src="images/facebook.svg" alt="facebook"></a><br>
+                <a href="#"><img src="images/instagram.svg" alt="Instagram"></a><br>
+                <a href="#"><img src="images/youtube.svg" alt="youtube"></a><br>
               </div>
             </div>
 
@@ -246,9 +289,12 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/slick.min.js"></script>
+
+  <script src="js/form_courses.js"></script>
+  <script src="js/form.js"></script>
   <script src="js/main.js"></script>
   <script src="js/script.js"></script>
-  <script src="js/form.js"></script>
+
   <script>
 
 
