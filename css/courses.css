@@ -1,0 +1,126 @@
+section {
+  padding: 30px;
+}
+.access h1 {
+  margin-top: 50px;
+  transform: translate(0, 120%);
+  opacity: 0.5;
+  transition: all 2.5s ease 0s;
+}
+.access h1._active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.access p {
+  transform: translate(0, 120%);
+  opacity: 0.5;
+  transition: all 2.5s ease 0s;
+}
+.access p._active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.access .thanks h2 {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.access .thanks p {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.access .thanks form {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.cours_header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.weather {
+  width: 50%;
+  text-align: center;
+}
+.weather h2 {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.weather .weather-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.weather .weather-box span {
+  color: #dba51d;
+}
+.weather .weather-box .temperature {
+  color: #ffffff;
+  font-size: 45px;
+  text-align: center;
+}
+.progress {
+  width: 50%;
+  text-align: center;
+}
+.progress h2 {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.progress span {
+  display: block;
+  color: #dba51d;
+  margin-bottom: 20px;
+}
+.progress .progress_box {
+  width: 80%;
+  height: 30px;
+  background-color: #e7deeb;
+  margin: 0 auto;
+}
+.progress #progress_color {
+  width: 0;
+  height: 30px;
+  background-color: #dba51d;
+}
+#basic,
+#practice {
+  display: none;
+}
+.cours_free {
+  text-align: center;
+}
+.cours_free #cours_btn {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 20px;
+}
+.cours_free #cours_lesson .hidden {
+  display: none;
+}
+.cours_free #cours_lesson div {
+  margin-bottom: 20px;
+}
+.cours_free #cours_lesson p {
+  margin-top: 20px;
+}
+.cours_free #cours_lesson input {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.cours_free #cours_lesson label {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 5px 10px;
+  display: inline-block;
+  width: auto;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: .5s;
+}
+.cours_free #cours_lesson label:hover {
+  box-shadow: -5px 5px 10px rgba(230, 236, 240, 0.3);
+  transform: scale(1.1);
+  outline-offset: 0;
+  outline: 0;
+}

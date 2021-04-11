@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>404</title>
+  <title>Курс с практикой</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/courses.css">
 </head>
 <body onload="checkReg()">
   <div class="preloader">
@@ -88,8 +89,129 @@
     <div class="wrapper">
       <div class="main2">
         <section class="access">
-          <h1>Спасибо</h1>
+          <h1 class="_anim-items _anim-no-hide">Базовый курс</h1>
+           <p class="_anim-items _anim-no-hide">Базовый курс по ландшафтному
+             дизайны, основф программы - теория. Вы узнаете все, что нужно знать дизайнеру.</p>
+           <div class="thanks" id="thanks1">
+             <h2 >Спасибо</h2>
+             <p >
+               Мы свяжемся с Вами в скором времени.
+             </p>
+             <p >
+               После оплаты мы пришлем Вам код доступа к странице курса. Введите его в поле и нажмите "Отправить"
+             </p>
+             <form >
+               <input type="text" id="code1" placeholder="Введите код">
+               <button type="button" id="checkBtn1">Отправить</button>
+             </form>
+           </div>
+           <div class="cours_header">
+             <div class="weather">
+               <h2>Узнайте, можно ли сегодня проводить практику на улице</h2>
+               <form id="searchF"  method="GET">
+                 <input id="searchT" type="text" placeholder="Название города(лат)">
+                 <button  id="searchBtn" type="button" name="button">&#128269;</button>
+               </form>
+               <h2 id="town"></h2>
+               <div class="weather-box">
+                 <div class="weather-icon">
+                <span class="weatherP"></span>
+                   <div class="weather-img"></div>
 
+                 </div>
+
+               <div class="temperature"></div>
+
+             </div>
+
+             </div>
+             <div class="progress">
+               <h2>Ваш прогресс в обучении</h2>
+               <span id="progress_value"></span>
+               <div class="progress_box">
+                 <div id="progress_color"></div>
+               </div>
+             </div>
+           </div>
+
+        </section>
+        <section class="cours_free" id="practice">
+          <div id="cours_btn">
+            <h3>Выберите урок</h3>
+            <button id="btn1">Урок 1</button>
+            <button id="btn2">Урок 2</button>
+            <button id="btn3">Урок 3</button>
+            <button id="btn4">Урок 4</button>
+
+          </div>
+          <div id="cours_lesson">
+            <div id="idC1" class="hidden">
+              <h3>Урок1 из класса</h3>
+              <p>Парфграф1</p><p>Параграфф2</p>
+              <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0O7MAFev8NI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+              </div>
+              <button id="btnClose1">Закрыть урок</button>
+              <p>Параграфф3</p>
+              <!-- <a style="color:#fff;" class="btn btn-primary btn-xs" target="_blank" href="test.html">Download</a> -->
+              <!-- <a href="#" download="" title="всплывающая подсказка">скачать файл</a> -->
+              <a href="test.html" download>
+                <button type="button">Скачать учебные материалы</button>
+              </a><br>
+              <label for="homework">Загрузить домашнее задание</label>
+              <input type="file" name="homework" id="homework"><br>
+               <button  type="button">Отправить домашнее задание</button>
+            </div>
+            <div id="idC2" class="hidden">
+              <h3>Урок2 из класса</h3>
+              <p>Парфграф1</p>
+              <p>Параграфф2</p>
+              <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0O7MAFev8NI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+              </div>
+              <button id="btnClose2">Закрыть урок</button>
+              <p>Параграфф3</p>
+              <a href="test.html" download>
+                <button type="button">Скачать учебные материалы</button>
+              </a><br>
+              <label for="homework">Загрузить домашнее задание</label>
+              <input type="file" name="homework" id="homework"><br>
+               <button  type="button">Отправить домашнее задание</button>
+            </div>
+            <div id="idC3" class="hidden">
+              <h3>Урок3 из класса</h3>
+              <p>Парфграф1</p>
+              <p>Параграфф2</p>
+              <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0O7MAFev8NI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+              </div>
+              <button id="btnClose3">Закрыть урок</button>
+              <p>Параграфф3</p>
+              <a href="test.html" download>
+                <button type="button">Скачать учебные материалы</button>
+              </a><br>
+              <label for="homework">Загрузить домашнее задание</label>
+              <input type="file" name="homework" id="homework"><br>
+               <button  type="button">Отправить домашнее задание</button>
+            </div>
+            <div id="idC4" class="hidden">
+              <h3>Урок4</h3>
+              <p>Парфграф1</p>
+              <p>Параграф2</p>
+              <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0O7MAFev8NI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+              </div>
+              <button id="btnClose4">Закрыть урок</button>
+              <p>Параграф3</p>
+              <a href="test.html" download>
+                <button type="button">Скачать учебные материалы</button>
+              </a><br>
+              <label for="homework">Загрузить домашнее задание</label>
+              <input type="file" name="homework" id="homework"><br>
+               <button  type="button">Отправить домашнее задание</button>
+            </div>
+
+          </div>
         </section>
       </div>
 
@@ -147,8 +269,19 @@
   <script src="js/main.js"></script>
   <script src="js/script.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/courses.js"></script>
   <script>
+  // функция  доступа к странице продвинутый курс
 
+  document.getElementById("checkBtn1").onclick = function(){
+
+    let code = document.getElementById("code1").value;
+
+    if(code == '2222'){
+      document.getElementById("practice").style.display = 'block';
+      document.getElementById("thanks1").style.display = 'none';
+    }
+  }
 
 
   $( function() {
