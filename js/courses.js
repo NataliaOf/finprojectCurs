@@ -41,7 +41,20 @@
         document.querySelector('.temperature').innerHTML = Math.round(weatherOb.main.temp)  + "&deg;";
          //Вывожу картинку
          document.querySelector('.weather-img').innerHTML = '<img src=" http://openweathermap.org/img/wn/'+ weatherOb.weather[0]['icon'] +'@2x.png">';
+          // console.log(weatherOb.weather[0]['main']);
+          // console.log(document.querySelector('.conditions'));
+        if( weatherOb.weather[0]['main'] == "Rain" ){
+          document.querySelector('.conditions').innerText = "Сегодня дождь, лучше заляться планированием новых проектов";
 
+        }else if( weatherOb.weather[0]['main'] == "Drizzle"){
+          document.querySelector('.conditions').innerText ="Сегодня плохая погода, лучше дома посидеть. Сделайте визуализацию нового объекта";
+        }else if( weatherOb.weather[0]['main'] == "Clear"){
+          document.querySelector('.conditions').innerText = "Отличная погода, можно поработать на улице.";
+        }else if( weatherOb.weather[0]['main'] == "Clouds"){
+            document.querySelector('.conditions').innerText = "Сегодня облачно, можно высадить растения, они отлично прижевутся.";
+        }else{
+          document.querySelector('.conditions').innerText = "Погода не очень хорошая, но если есть срочная работа можно ее сделать."
+        }
 
        }else{
            window.open("404.html");
@@ -49,6 +62,8 @@
       }
 request.send();
 });
+
+
 
 
 

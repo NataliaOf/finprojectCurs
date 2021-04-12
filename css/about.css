@@ -1,5 +1,5 @@
 .main2 {
-  margin-top: -90vh;
+  margin-top: -83vh;
   padding-bottom: 200px;
   position: relative;
   z-index: 5;
@@ -57,6 +57,8 @@ h2._active {
   opacity: 1;
 }
 .teachers .wrapper_teachers .teacher p {
+  transform: translate(0, 0);
+  opacity: 1;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -67,7 +69,7 @@ section.reviews {
 .slider .slider_item {
   background-color: #8b8383;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
+  color: #ffffff;
   padding: 20px;
   margin-right: 10px;
 }
@@ -80,6 +82,9 @@ section.reviews {
 .slider .slider_item .review img {
   width: 100px;
   border-radius: 50%;
+}
+.slider .slider_item .review h3 {
+  color: #ffffff;
 }
 /* Слайдер */
 /* Слайдер запущен */
@@ -310,5 +315,14 @@ section.comments .comment-add textarea {
   .tablink {
     width: auto;
     text-align: center;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .wrapper_cours {
+    display: block;
+  }
+  .wrapper_cours .info_cours,
+  .wrapper_cours .form_cours {
+    width: 100%;
   }
 }

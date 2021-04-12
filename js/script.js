@@ -1,10 +1,4 @@
-// let gallery = document.getElementById('gallery');
-// console.log(gallery);
-//
-// ol.onclick = function(event){
-//   let target = event.target;
-//   target.style.transform = ''scale''
-// }
+
 
 
 
@@ -40,6 +34,7 @@ $('#cookie').css({marginLeft: "-1500px", opacity: "0"})
   $('#video').click(function(){
     $('#video').css({display: "none"})
   })
+  
   // Прелоадер
     // задержка функции
     setTimeout(function(){

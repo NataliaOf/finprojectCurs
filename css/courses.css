@@ -73,13 +73,13 @@ section {
 }
 .progress .progress_box {
   width: 80%;
-  height: 30px;
+  height: 10px;
   background-color: #e7deeb;
   margin: 0 auto;
 }
 .progress #progress_color {
   width: 0;
-  height: 30px;
+  height: 10px;
   background-color: #dba51d;
 }
 #basic,
@@ -123,4 +123,43 @@ section {
   transform: scale(1.1);
   outline-offset: 0;
   outline: 0;
+}
+.thumb-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  height: 0;
+  overflow: hidden;
+}
+.thumb-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  outline-width: 0;
+}
+.planned_activities {
+  text-align: left;
+}
+.planned_activities h2 {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.planned_activities ul li {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.planned_activities ul li span {
+  color: #dba51d;
+}
+@media screen and (max-width: 1000px) {
+  .cours_header {
+    display: block;
+  }
+  .weather,
+  .progress {
+    width: 100%;
+  }
 }

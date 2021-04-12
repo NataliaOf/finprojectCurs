@@ -1,10 +1,10 @@
-// https://www.w3schools.com/code/tryit.asp?filename=GOZXSQD3230F
+<!-- File has been saved to: https://www.w3schools.com/code/tryit.asp?filename=GPHGWF4KJ76Y -->
 
 <!DOCTYPE html>
 <html>
 <body onload="checkReg()">
- <div id="regDiv"></div><button id="deliteUser">Выйти</button>
-   <div id="dialog-form">
+ <div id="regDiv"></div>
+   <div id="dialog-form"><button id="deliteUser">Выйти</button>
             <form id="formCheckIn" action="index.html" method="POST">
              <p class="validateTips">Заполните форму.</p>
                <label for="name">Имя</label><br>
@@ -44,7 +44,7 @@
         	btn.style.display = "block";
             btn1.style.display = "none";
         }
-    };
+    }
     document.getElementById("btnCheckIn").addEventListener("click",function() {
 
     	var inputName = document.getElementById("name").value;
@@ -57,24 +57,20 @@
         document.cookie = "register="+inputName+"; expires="+expDate.toGMTString()+"; path=/";
         document.cookie = "regEmail="+inputEmail+"; expires="+expDate.toGMTString()+"; path=/";
         document.cookie = "regPass="+inputPassw+"; expires="+expDate.toGMTString()+"; path=/";
-        document.getElementById("createUser").style.display = "none";
-
-document.getElementById("deliteUser").style.display = "block";
 
     	document.getElementById('formCheckIn').submit();
-        checkReg();
     });
 
-     document.getElementById("deliteUser").addEventListener("click",function(){
+     document.getElementById("deliteUser").addEventListener("click",function() {
       var expDate = new Date;
-      expDate.setTime((new Date).getTime() - 600*1000);
-       document.cookie = "register="+inputName+"; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
-        document.cookie = "regEmail="+inputEmail+"; expires="+expDate.toGMTString()+"; path=/";
-        document.cookie = "regPass="+inputPassw+"; expires="+expDate.toGMTString()+"; path=/";
-         document.getElementById("createUser").style.display = "block";
-
+      expDate.setTime((new Date).getTime() - 60*1000);
+       document.cookie = "register=; expires=Tue, 19 Jan 2019 03:14:07 GMT";
+         document.cookie = "regEmail=; expires=Tue, 19 Jan 2019 03:14:07 GMT";
+         document.cookie = "regPass=;expires=Tue, 19 Jan 2019 03:14:07 GMT";
+         var btn = document.getElementById("createUser");
+         btn.style.display = "block";
          document.getElementById("deliteUser").style.display = "none";
-        checkReg();
+
      });
  </script>
 </body>

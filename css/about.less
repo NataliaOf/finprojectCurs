@@ -38,7 +38,7 @@
 //****************************************************
 
 .main2{
-  margin-top: -90vh ;
+  margin-top: -83vh ;
   padding-bottom: 200px;
   position: relative;
   z-index: 5;
@@ -93,6 +93,7 @@ h2{
       }
       }
       p{
+        .animNone();
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
@@ -111,7 +112,7 @@ section.reviews{
      background-color: @bgDiv;
      border: 1px solid rgba(255, 255, 255, 0.2);
      // box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
-     color: #fff;
+     color: @colorP;
      // border-radius: 20px;
      padding: 20px;
      // text-align: center;
@@ -122,6 +123,9 @@ section.reviews{
        img{
          width: 100px;
          border-radius: 50%;
+       }
+       h3{
+         color:@colorP;
        }
      }
 
@@ -402,4 +406,14 @@ section.comments{
     text-align: center;
   }
 
+}
+
+@media screen and (max-width:1000px){
+  .wrapper_cours{
+    display: block;
+  }
+  .wrapper_cours .info_cours,
+  .wrapper_cours .form_cours {
+    width: 100%;
+  }
 }

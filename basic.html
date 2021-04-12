@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" href="css/courses.css">
 </head>
-<body onload="checkReg()">
+<body onload="checkReg()" id="body2">
   <div class="preloader">
     <div class="preloader_image"></div>
   </div>
@@ -22,10 +22,10 @@
           <div class="logo">
             <a href="index.html">
               <img src="images/logo.png" alt="logo">
-
-
             </a>
+            <a href="index.html">
               <span class="logoName">birch</span>
+             </a>
 
           </div>
 
@@ -107,7 +107,7 @@
            </div>
            <div class="cours_header">
              <div class="weather">
-               <h2>Узнайте, можно ли сегодня проводить практику на улице</h2>
+               <h2 class="conditions">Узнайте, можно ли сегодня проводить практику на улице</h2>
                <form id="searchF"  method="GET">
                  <input id="searchT" type="text" placeholder="Название города(лат)">
                  <button  id="searchBtn" type="button" name="button">&#128269;</button>
@@ -148,7 +148,7 @@
             <div id="idC1" class="hidden">
               <h3>Урок1 из класса</h3>
               <p>Парфграф1</p><p>Параграфф2</p>
-              <div>
+              <div class="thumb-wrap">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/0O7MAFev8NI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
               </div>
               <button id="btnClose1">Закрыть урок</button>
@@ -166,7 +166,7 @@
               <h3>Урок2 из класса</h3>
               <p>Парфграф1</p>
               <p>Параграфф2</p>
-              <div>
+              <div class="thumb-wrap">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/0O7MAFev8NI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
               </div>
               <button id="btnClose2">Закрыть урок</button>
@@ -182,7 +182,7 @@
               <h3>Урок3 из класса</h3>
               <p>Парфграф1</p>
               <p>Параграфф2</p>
-              <div>
+              <div class="thumb-wrap">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/0O7MAFev8NI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
               </div>
               <button id="btnClose3">Закрыть урок</button>
@@ -198,7 +198,7 @@
               <h3>Урок4</h3>
               <p>Парфграф1</p>
               <p>Параграф2</p>
-              <div>
+              <div class="thumb-wrap">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/0O7MAFev8NI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
               </div>
               <button id="btnClose4">Закрыть урок</button>
@@ -221,8 +221,10 @@
       <div class="wrapper">
         <div class="wrapper_foorer">
           <div class="logo_footer">
+            <a href="index.html">
               <img src="images/logo.png" alt="logo">
-            <span class="logoName">birch</span>
+              <span class="logoName">birch</span>
+            </a>
           </div>
           <div class="footer_menu">
             <h3>Меню</h3>
@@ -270,6 +272,7 @@
   <script src="js/script.js"></script>
   <script src="js/form.js"></script>
   <script src="js/courses.js"></script>
+    <script src="js/cooki.js"></script>
   <script>
   // функция  доступа к странице базовый курс
   document.getElementById("checkBtn").onclick = function(){
@@ -279,10 +282,36 @@
     if(code == '1111'){
       document.getElementById("basic").style.display = 'block';
       document.getElementById("thanks").style.display = 'none';
+      // var inputName = document.getElementById("name").value;
+      var expDate = new Date;
+      expDate.setTime((new Date).getTime() + 600*1000);
+
+      document.cookie = "code="+code+"; expires="+expDate.toGMTString()+"; path=/";
     }
-  }
+  };
+
+  // Добавляю куки доступа
+      document.getElementById("body2").onload = function(){
+        var s = document.cookie.split('; ');
+          var cookieObject = {};
+          for(var i=0; i < s.length; i++){
+             var c = s[i].split('=');
+             cookieObject[c[0]] = c[1];
+          }
+          if('code' in cookieObject  in cookieObject ) {
+
+            document.getElementById("thanks").style.display = "none";
+            document.getElementById("basic").style.display = "block";
+          }
+          else {
+            document.getElementById("thanks").style.display = "block";
+            document.getElementById("basic").style.display = "none";
+          };
+      };
 
   $( function() {
+
+
 
 
     /// Бургер
