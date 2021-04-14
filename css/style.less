@@ -44,15 +44,17 @@ font-family: 'Russo One', sans-serif; */
   opacity: 1;
 }
 
+.animNone(){
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
 
 // ********Основные стили
 body{
   font-family: @fontP;
   font-size: 18px;
-  // background: linear-gradient(180deg, #473e3e 0%, rgba(255, 255, 255, 0) 100%), #C4C4C4;
   background: url(../images/bg-b1.jpg);
-  // background-color: red;
-  // background-size: cover;
   position: relative;
 }
 section{
@@ -68,7 +70,7 @@ h1, h2, h3{
   font-weight: 600;
 }
 h1{
-  // color:red;
+
   font-size: 64px;
   line-height: 89px;
 }
@@ -94,7 +96,6 @@ li{
 }
 
 .wrapper{
-  // max-width: 994px;
   width: 80%;
   margin: 0 auto;
 }
@@ -105,7 +106,6 @@ a{
 }
 a:hover{
   text-decoration: underline;
- // padding-bottom: 10px;
 }
 a:active{
   color:red;
@@ -114,7 +114,6 @@ button{
   padding: 5px 10px;
   border: 1px solid #fff;
   text-transform: uppercase;
-  // border-radius: 20px;
   background-color: inherit;
   margin: 10px;
   cursor: pointer;
@@ -127,7 +126,7 @@ button:hover{
   transform: scale(1.1);
   outline-offset: 0;
   outline: 0;
-  // 9px 7px 8px 0px rgba(230, 236, 240, 0.3);
+
 }
 button:active, button:focus{
   outline-offset: 0;
@@ -160,10 +159,7 @@ header{
   height: 100vh;
   border: 3px solid rgba(255, 255, 255, 0.2);
 box-shadow: 0px 20px 8px -5px rgba(0, 0, 0, 0.37);
-  // box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
 
-}
-footer{
 
 }
 
@@ -191,8 +187,7 @@ footer{
   .logo{
      .flex();
       align-items: center;
-    // width: 50px;
-    // height: 50px;
+
     img{
       width: 50px;
       border-radius: 50%;
@@ -220,7 +215,7 @@ footer{
          transition: 1s;
          color:@colorP;
          margin-bottom: 5px;
-         margin-right:30px;
+         margin-right:10vw;
          text-transform: uppercase;
          font-size: 20px;
          &.active{
@@ -246,19 +241,17 @@ footer{
     #dialog-form{
       display: none;
       background-color:@bgBtn;
-      // border: 2px solid #362d5f;
+
       border: 1px solid rgba(255, 255, 255, 0.2);
 
       box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
       color: #fff;
-      // border-radius: 20px;
       padding: 20px 70px;
       margin-left: 10px;
       position:fixed;
       z-index: 6;
       top: 30%;
       left: 35%;
-      // width: 40%;
       height: auto;
       .validateTips{
         margin-bottom: 10px;
@@ -282,7 +275,7 @@ footer{
   .sub-menu_link{
     display: block;
     color:@colorP;
-    padding: 5px;
+    padding: 20px 20px 10px 20px;
   }
 }
 
@@ -293,7 +286,6 @@ main{
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
     color: #fff;
-    // border-radius: 20px;
     padding: 20px;
     text-align: center;
     width: 50%;
@@ -318,7 +310,6 @@ main{
   border: 1px solid rgba(255, 255, 255, 0.2);
 
   box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
-// background-color: rgba(61, 65, 58, 0.77);
 
   position: relative;
   z-index: 3;
@@ -340,7 +331,7 @@ main{
         h1{
            margin-top: 50px;
            .anim-show();
-           transition: all 2.5s ease 0s;
+           transition: all 4.5s ease 0s;
 
            &._active{
              .active();
@@ -348,7 +339,7 @@ main{
         }
         p{
           .anim-show();
-             transition: all 2.8s ease 0s;
+             transition: all 4.8s ease 0s;
 
            &._active{
              .active();
@@ -359,21 +350,15 @@ main{
         .imgPlay{
             width:150px;
             height: 150px;
-            // border-radius: 50%;
-            // overflow: hidden;
             margin-bottom: 30px;
             margin: 10px auto;
-            // text-align: center;
+            cursor: pointer;
         }
         img{
 
           width: 150px;
-          // border-radius: 50%;
         }
 
-          // margin-bottom: 30px;
-          // .flex();
-          // align-items: flex-end;
            position: relative;
           .video{
 
@@ -401,11 +386,10 @@ main{
               margin-bottom: 0;
             }
             form{
-              // border: 2px solid red;
               input{
                 font-size: 20px;
-                p.validP{
-                  margin-bottom:0;
+                .validP{
+                    margin-left: 10px;
                 }
               }
             }
@@ -416,20 +400,7 @@ main{
 
 
 
-    // .contact{
-    //
-    //   padding: 20px 0;
-    //   margin-bottom: 30px;
-    //   .anim-show();
-    //      transition: all 2.8s ease 0s;
-    //
-    //   &._active{
-    //     .active();
-    //   }
-    // }
-    //
-
-    //  }
+    
 
   }
   .social{

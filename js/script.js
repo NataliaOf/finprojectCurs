@@ -34,13 +34,13 @@ $('#cookie').css({marginLeft: "-1500px", opacity: "0"})
   $('#video').click(function(){
     $('#video').css({display: "none"})
   })
-  
+
   // Прелоадер
     // задержка функции
     setTimeout(function(){
       // Добавляю класс со стилями прелоадера
       $('body').addClass('loaded')
-    }, 1000);
+    }, 3000);
 
 //Слайдер
 $('.slider').slick({

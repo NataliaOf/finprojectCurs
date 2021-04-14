@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Курс с практикой</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
@@ -31,9 +32,9 @@
 
           <nav class="menu">
             <ul class="menu_list">
-              <div class="burger">
+              <li class="burger">
                 <span></span>
-              </div>
+              </li>
 
               <li><a class="menu_link" href="index.html">Главная</a></li>
               <li><a class="menu_link" href="courses.html">Курсы</a>
@@ -78,7 +79,7 @@
 
              </form>
            </div>
-           <div id="regDiv"></div>
+           <!-- <div id="regDiv"></div> -->
            <button id="createUser">Регистрация</button>
         </div>
       </div>
@@ -148,67 +149,81 @@
           <div id="cours_lesson">
             <div id="idC1" class="hidden">
               <h3>Урок1</h3>
-              <p>Парфграф1</p><p>Параграфф2</p>
+              <p>
+                Создание сада предполагает воспроизведение фрагмента живой природы на собственном участке. Дизайн ландшафта способен улучшить и усовершенствовать территорию вокруг дома в соответствии с определенными вкусами и понятиями о красоте. Теоретический урок поможет освоить восточный и западный подходы в ландшафтном дизайне, разобраться со множеством стилей оформления территории, выучить основные профессиональные термины, познакомиться с историей дизайна окружающей среды. Занятие содержит полезный видеоряд с большим количеством примеров, а также советы начинающим дизайнерам о первых шагах в работе над участком.
+              </p><p>
+                Проектирование участка зависит от особенностей территории. При покупке земли необходимо обращать внимание на множество факторов: тип почвы, масштаб пространства, рельеф, планировка дома. Архитектор и дизайнер Камилла Амирханова учит работать с публичной кадастровой картой, разбираться в характеристиках почвы, учитывать факторы скрытых коммуникаций при планировании территории. В обучающем ролике новички услышат примеры решения нестандартных задач из профессионального опыта Камиллы.
+              </p>
               <div class="thumb-wrap">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Bk6Wv_e1Jro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <button id="btnClose1">Закрыть урок</button>
-              <p>Параграфф3</p>
-              <!-- <a style="color:#fff;" class="btn btn-primary btn-xs" target="_blank" href="test.html">Download</a> -->
-              <!-- <a href="#" download="" title="всплывающая подсказка">скачать файл</a> -->
-              <a href="test.html" download>
-                <button type="button">Скачать учебные материалы</button>
-              </a><br>
+              <p>Почитайте дополнительный материал</p>
+
+                <button type="button"><a href="test.html" download>Скачать учебные материалы</a></button>
+              <br>
               <label for="homework">Загрузить домашнее задание</label>
               <input type="file" name="homework" id="homework"><br>
                <button  type="button">Отправить домашнее задание</button>
             </div>
             <div id="idC2" class="hidden">
               <h3>Урок2</h3>
-              <p>Парфграф1</p>
-              <p>Параграфф2</p>
+              <p>
+                Создание сада предполагает воспроизведение фрагмента живой природы на собственном участке. Дизайн ландшафта способен улучшить и усовершенствовать территорию вокруг дома в соответствии с определенными вкусами и понятиями о красоте. Теоретический урок поможет освоить восточный и западный подходы в ландшафтном дизайне, разобраться со множеством стилей оформления территории, выучить основные профессиональные термины, познакомиться с историей дизайна окружающей среды. Занятие содержит полезный видеоряд с большим количеством примеров, а также советы начинающим дизайнерам о первых шагах в работе над участком.
+              </p>
+              <p>
+                Проектирование участка зависит от особенностей территории. При покупке земли необходимо обращать внимание на множество факторов: тип почвы, масштаб пространства, рельеф, планировка дома. Архитектор и дизайнер Камилла Амирханова учит работать с публичной кадастровой картой, разбираться в характеристиках почвы, учитывать факторы скрытых коммуникаций при планировании территории. В обучающем ролике новички услышат примеры решения нестандартных задач из профессионального опыта Камиллы.
+              </p>
               <div class="thumb-wrap">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Bk6Wv_e1Jro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <button id="btnClose2">Закрыть урок</button>
-              <p>Параграфф3</p>
-              <a href="test.html" download>
-                <button type="button">Скачать учебные материалы</button>
-              </a><br>
+              <p>Почитайте дополнительный материал</p>
+
+                <button type="button"><a href="test.html" download>Скачать учебные материалы</a></button>
+              <br>
               <label for="homework">Загрузить домашнее задание</label>
-              <input type="file" name="homework" id="homework"><br>
+              <input type="file" name="homework" id="homework1"><br>
                <button  type="button">Отправить домашнее задание</button>
             </div>
             <div id="idC3" class="hidden">
               <h3>Урок3 </h3>
-              <p>Парфграф1</p>
-              <p>Параграфф2</p>
+              <p>
+                Создание сада предполагает воспроизведение фрагмента живой природы на собственном участке. Дизайн ландшафта способен улучшить и усовершенствовать территорию вокруг дома в соответствии с определенными вкусами и понятиями о красоте. Теоретический урок поможет освоить восточный и западный подходы в ландшафтном дизайне, разобраться со множеством стилей оформления территории, выучить основные профессиональные термины, познакомиться с историей дизайна окружающей среды. Занятие содержит полезный видеоряд с большим количеством примеров, а также советы начинающим дизайнерам о первых шагах в работе над участком.
+              </p>
+              <p>
+                Проектирование участка зависит от особенностей территории. При покупке земли необходимо обращать внимание на множество факторов: тип почвы, масштаб пространства, рельеф, планировка дома. Архитектор и дизайнер Камилла Амирханова учит работать с публичной кадастровой картой, разбираться в характеристиках почвы, учитывать факторы скрытых коммуникаций при планировании территории. В обучающем ролике новички услышат примеры решения нестандартных задач из профессионального опыта Камиллы.
+              </p>
               <div class="thumb-wrap">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Bk6Wv_e1Jro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <button id="btnClose3">Закрыть урок</button>
-              <p>Параграфф3</p>
-              <a href="test.html" download>
-                <button type="button">Скачать учебные материалы</button>
-              </a><br>
+              <p>Почитайте дополнительный материал</p>
+
+                <button type="button"><a href="test.html" download>Скачать учебные материалы</a></button>
+              <br>
               <label for="homework">Загрузить домашнее задание</label>
-              <input type="file" name="homework" id="homework"><br>
+              <input type="file" name="homework" id="homework2"><br>
                <button  type="button">Отправить домашнее задание</button>
             </div>
             <div id="idC4" class="hidden">
               <h3>Урок4</h3>
-              <p>Парфграф1</p>
-              <p>Параграф2</p>
+              <p>
+                Создание сада предполагает воспроизведение фрагмента живой природы на собственном участке. Дизайн ландшафта способен улучшить и усовершенствовать территорию вокруг дома в соответствии с определенными вкусами и понятиями о красоте. Теоретический урок поможет освоить восточный и западный подходы в ландшафтном дизайне, разобраться со множеством стилей оформления территории, выучить основные профессиональные термины, познакомиться с историей дизайна окружающей среды. Занятие содержит полезный видеоряд с большим количеством примеров, а также советы начинающим дизайнерам о первых шагах в работе над участком.
+              </p>
+              <p>
+                Проектирование участка зависит от особенностей территории. При покупке земли необходимо обращать внимание на множество факторов: тип почвы, масштаб пространства, рельеф, планировка дома. Архитектор и дизайнер Камилла Амирханова учит работать с публичной кадастровой картой, разбираться в характеристиках почвы, учитывать факторы скрытых коммуникаций при планировании территории. В обучающем ролике новички услышат примеры решения нестандартных задач из профессионального опыта Камиллы.
+              </p>
               <div class="thumb-wrap">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Bk6Wv_e1Jro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <button id="btnClose4">Закрыть урок</button>
-              <p>Параграф3</p>
-              <a href="test.html" download>
-                <button type="button">Скачать учебные материалы</button>
-              </a><br>
+              <p>Почитайте дополнительный материал</p>
+
+                <button type="button"><a href="test.html" download>Скачать учебные материалы</a></button>
+              <br>
               <label for="homework">Загрузить домашнее задание</label>
-              <input type="file" name="homework" id="homework"><br>
+              <input type="file" name="homework" id="homework3"><br>
                <button  type="button">Отправить домашнее задание</button>
             </div>
 
@@ -216,21 +231,26 @@
 
           <div class="planned_activities">
             <h2>Запланированные мероприятия:</h2>
+          <div class="box_events">
             <ul>
-              <li><span>16.04</span> : Видно конфиренция</li>
-              <li><span>18.04</span> : Практика</li>
-              <li><span>20.04</span> : Видно конфиренция</li>
-              <li><span>23.04</span> : Видно конфиренция</li>
-              <li><span>25.04</span> : Практика</li>
-              <li><span>27.04</span> : Видно конфиренция</li>
-              <li><span>30.04</span> : Видно конфиренция</li>
-              <li><span>02.05</span> : Практика</li>
+              <li id="event1"><span>16.04</span> : Видео конфиренция</li>
+              <li id="event2"><span>18.04</span> : Практика</li>
+              <li id="event3"><span>20.04</span> : Видно конфиренция</li>
+              <li id="event4"><span>23.04</span> : Видно конфиренция</li>
+              <li id="event5"><span>25.04</span> : Практика</li>
+              <li id="event6"><span>27.04</span> : Видно конфиренция</li>
+              <li id="event7"><span>30.04</span> : Видно конфиренция</li>
+              <li id="event8"><span>02.05</span> : Практика</li>
             </ul>
+            <div id="events">
+                Разберем виды живой изгороди
+            </div>
+          </div>
           </div>
         </section>
 
       </div>
-
+</div>
     </main>
 
     <footer class="footer">
@@ -284,7 +304,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/slick.min.js"></script>
-  <script src="js/main.js"></script>
+  <!-- <script src="js/main.js"></script> -->
   <script src="js/script.js"></script>
   <script src="js/form.js"></script>
   <script src="js/courses.js"></script>
@@ -308,6 +328,7 @@
 
 // Добавляю куки доступа
     document.getElementById("body2").onload = function(){
+      console.log("Загрузка");
       var s = document.cookie.split('; ');
         var cookieObject = {};
         for(var i=0; i < s.length; i++){

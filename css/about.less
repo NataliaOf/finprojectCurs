@@ -47,9 +47,17 @@
 
   box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
   .main_info{
+    h1,h3{
+      .anim-show();
+      transition: all 4.8s ease 0s;
+
+      &._active{
+        .active();
+      }
+    }
     p{
       .anim-show();
-      transition: all 2s ease 0s;
+      transition: all 4.8s ease 0s;
 
       &._active{
         .active();
@@ -86,7 +94,7 @@ h2{
           border-radius:50%;
         }
         .anim-show();
-        transition: all 2s ease 0s;
+        transition: all 4.5s ease 0s;
 
           &._active{
           .active();
@@ -108,14 +116,12 @@ section.reviews{
 // Отзывы слайдер
  .slider{
    .slider_item{
-
-     background-color: @bgDiv;
+     width: 100%;
+     height: 250px;
+    background-color: @bgDiv;
      border: 1px solid rgba(255, 255, 255, 0.2);
-     // box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
      color: @colorP;
-     // border-radius: 20px;
      padding: 20px;
-     // text-align: center;
      margin-right: 10px;
      .review{
        .flex();
@@ -127,17 +133,14 @@ section.reviews{
        h3{
          color:@colorP;
        }
+       margin-bottom: 20px;
      }
 
    }
  }
 
  /* Слайдер */
-.slick-slider{}
-/* Слайдер запущен */
-.slick-slider.slick-initialized{}
-/* Слайдер с точками */
-.slick-slider.slick-dotted{}
+
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
@@ -147,31 +150,26 @@ section.reviews{
   display: flex;
 
 }
-/* Слайд */
-.slick-slide{}
-/* Слайд активный (показывается) */
-.slick-slide.slick-active{}
-/* Слайд основной */
-.slick-slide.slick-current{}
-/* Слайд по центру */
-.slick-slide.slick-center{}
-/* Клонированный слайд */
-.slick-slide.slick-cloned{}
+
 /* Стрелка */
-.slick-arrow{}
-/* Стрелка влево */
+.slick-arrow{
+
+  width: 0;
+  height: 0;
+
+}
+// /* Стрелка влево */
 .slider .slick-arrow.slick-prev{
   left: 3px;
-  // background: url(../images/next.png) 0 0 / 100% no-repeat;
+font-size: 0;
 }
-/* Стрелка вправо */
+// /* Стрелка вправо */
 .slider .slick-arrow.slick-next{
   right: 3px;
+  font-size: 0;
 
-  // background-image: url(../images/back.png)no-repeat;
 }
-/* Стрелка не активная */
-.slick-arrow.slick-disabled{}
+
 /* Точки (булиты) */
 .slider .slick-dots{
   display: flex;
@@ -196,7 +194,7 @@ section.reviews{
 
   .slider{
     position: relative;
-    padding: 0 50px;
+    // padding: 0 50px;
   }
   .slider .slick-arrow{
 
@@ -204,15 +202,10 @@ section.reviews{
     top: 50%;
     z-index: 10;
     font-size: 0;
-    width: 30px;
-    height: 60px;
-    margin: -30px 0 0 0;
+    margin: -30px -2000px 0 -2000px;
   }
 
-  .slider .slick-arrow:focus{
-    background: inherit;
 
-  }
 
 
   //стили аккардеона
@@ -235,9 +228,17 @@ section.reviews{
       &._active{
         .active();
       }
+      span{
+        float: right;
+        font-size: 30px;
+        transition: 0.5s;
+      }
 }
 .activee, .accordion:hover {
     background-color: #554c4a;
+}
+.activee, .accordion:hover span{
+  transform: rotate(45deg);
 }
 .panel {
     padding: 10px 18px;
@@ -253,7 +254,7 @@ section.reviews{
 .main_info{
   h1{
     .anim-show();
-      transition: all 2.5s ease 0s;
+      transition: all 4.5s ease 0s;
 
       &._active{
         .active();
@@ -261,7 +262,7 @@ section.reviews{
   }
   h3{
       .anim-show();
-      transition: all 2.8s ease 0s;
+      transition: all 4.8s ease 0s;
 
       &._active{
         .active();
@@ -294,7 +295,7 @@ section.reviews{
     cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
-    width: 25%;
+    width: 33%;
 
 }
 
@@ -328,7 +329,6 @@ section.reviews{
         content: "";
         display: inline-block;
         margin-bottom: -5px;
-
         width: 30px;
         height: 30px;
         background: url("../images/check.png");
@@ -346,6 +346,9 @@ section.reviews{
   }
   .form_cours{
     width: 45%;
+    form p{
+      .animNone();
+    }
   }
 }
 
@@ -405,6 +408,22 @@ section.comments{
     width: auto;
     text-align: center;
   }
+  .slider p{
+    font-size: 14px;
+  }
+  .slider .slider_item .review{
+    margin-bottom: 0;
+  }
+  .slider .slider_item .review img{
+    width: 50px;
+  }
+  .slider .slider_item .review h3{
+    margin-bottom: 10px;
+  }
+  .slider .slider_item {
+    padding: 10px;
+  }
+
 
 }
 

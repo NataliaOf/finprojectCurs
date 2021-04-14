@@ -5,7 +5,7 @@ section {
   margin-top: 50px;
   transform: translate(0, 120%);
   opacity: 0.5;
-  transition: all 2.5s ease 0s;
+  transition: all 4.5s ease 0s;
 }
 .access h1._active {
   transform: translate(0, 0);
@@ -14,7 +14,7 @@ section {
 .access p {
   transform: translate(0, 120%);
   opacity: 0.5;
-  transition: all 2.5s ease 0s;
+  transition: all 4.8s ease 0s;
 }
 .access p._active {
   transform: translate(0, 0);
@@ -143,16 +143,42 @@ section {
 .planned_activities {
   text-align: left;
 }
+.planned_activities .box_events {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .planned_activities h2 {
   transform: translate(0, 0);
   opacity: 1;
 }
+.planned_activities ul {
+  width: 45%;
+}
 .planned_activities ul li {
   margin-bottom: 20px;
   color: #ffffff;
+  padding: 20px;
 }
 .planned_activities ul li span {
   color: #dba51d;
+}
+.planned_activities ul li:hover {
+  cursor: pointer;
+  background-color: #8a8a87;
+}
+.planned_activities .eventActiv {
+  background-color: #8a8a87;
+  border: 2px solid #ffffff;
+}
+.planned_activities #events {
+  padding: 30px;
+  height: 100px;
+  width: 45%;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background-color: #8a8a87;
 }
 @media screen and (max-width: 1000px) {
   .cours_header {
@@ -160,6 +186,17 @@ section {
   }
   .weather,
   .progress {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .planned_activities .box_events {
+    display: block;
+  }
+  .box_events ul {
+    width: 100%;
+  }
+  .box_events #events {
     width: 100%;
   }
 }

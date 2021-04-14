@@ -44,7 +44,7 @@ section{
   h1{
     margin-top: 50px;
     .anim-show();
-    transition: all 2.5s ease 0s;
+    transition: all 4.5s ease 0s;
 
     &._active{
       .active();
@@ -52,7 +52,7 @@ section{
   }
   p{
    .anim-show();
-    transition: all 2.5s ease 0s;
+    transition: all 4.8s ease 0s;
        &._active{
      .active()
     }
@@ -186,18 +186,42 @@ section{
 
 .planned_activities{
   text-align: left;
+  .box_events{
+    .flex();
+    align-items: center;
+  }
+
   h2{
     .animNone();
   }
   ul{
-
+    width: 45%;
     li{
       margin-bottom: 20px;
       color:  @colorP;
+      padding: 20px;
       span{
         color: @colorH;
       }
+      &:hover{
+        cursor: pointer;
+        background-color: #8a8a87;
+      }
+
     }
+
+  }
+  .eventActiv{
+    background-color: #8a8a87;
+    border: 2px solid  @colorP;
+  }
+  #events{
+    padding: 30px;
+    height: 100px;
+    width: 45%;
+    border: 2px solid  @colorP;
+    color: @colorP;
+      background-color: #8a8a87;
   }
 }
 
@@ -207,6 +231,18 @@ section{
   }
   .weather,
   .progress{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:600px){
+  .planned_activities .box_events{
+    display: block;
+  }
+  .box_events ul{
+    width: 100%;
+  }
+  .box_events #events{
     width: 100%;
   }
 }

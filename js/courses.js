@@ -8,10 +8,10 @@
    btn.addEventListener("click", function(){
      // Беру значение города
     var  searth = document.getElementById('searchT').value;
-
+console.log("Поиск города");
    // Подставляю в ссылку запрос
   var a ="http://api.openweathermap.org/data/2.5/weather?q="+ searth;
-  a +=  "&units=metric&lang=ru&appid=04290cb244a2433a949228107b1fe755";
+  a +=  "&units=metric&lang=ru&appid=04290cb244a2433a949228107b1fe755&lang=ru";
   // Проверяю наличие объекта XMLHttpRequest
     let request;
     if(window.XMLHttpRequest){
@@ -67,122 +67,6 @@ request.send();
 
 
 
-// Класс уроков бесплатный курс
-
-// class Lesson{
-//   constructor(idC, h3, p1, p2, divVideo, p3, closeId,  btn, clas){
-//    this.idC = idC;
-//    this.h3 = h3;
-//    this.p1 = p1;
-//    this.p2 = p2;
-//    this.divVideo = divVideo;
-//    this.p3 = p3;
-//    this.closeId = closeId;
-//    this.btn = btn;
-//   this.class = clas;
-//
-//   }
-//   create(){
-//     let conteiner = document.createElement("div");
-//     conteiner.id = this.idC;
-//
-//     // console.log(conteiner);
-//     let h3 =document.createElement("h3");
-//     h3.innerText = this.h3;
-//     conteiner.append(h3);
-//
-//     let p1 =document.createElement("p");
-//     p1.innerText = this.p1;
-//     conteiner.append(p1);
-//
-//     let p2 =document.createElement("p");
-//     p2.innerText = this.p2;
-//     conteiner.append(p2);
-//
-//     let divVideo =document.createElement("div");
-//     divVideo.innerHTML = this.divVideo;
-//     conteiner.append(divVideo);
-//
-//     let btnClose = document.createElement("button");
-//     btnClose.id = this.closeId;
-//     btnClose.innerText = "Закрыть урок";
-//     conteiner.append(btnClose);
-//
-//     let p3 =document.createElement("p");
-//     p3.innerText = this.p3;
-//     conteiner.append(p3);
-//
-//     let btn = document.createElement("button")
-//     btn.id = this.class;
-//
-//     btn.innerText = this.btn;
-//     // console.log(btn);
-//     let btnBox = document.getElementById('cours_btn');
-//     btnBox.append(btn);
-//     let box = document.getElementById('cours_lesson');
-//     box.append(conteiner);
-//   // console.log(document.getElementById(this.idC));
-//     conteiner.style.display = "none";
-//   };
-//
-//
-// };
-//
-//
-// var lesson1 = new Lesson(
-// "idC1",
-// "Урок1",
-// "Парфграф1",
-// "Параграфф2",
-// '<iframe width="560" height="315" src="https://www.youtube.com/embed/0O7MAFev8NI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-// "Параграфф3",
-// "btnClose1",
-// "Урок 1",
-// "btn1");
-// lesson1.create();
-// // lesson1.lessonOpen();
-//
-//     var lesson2 = new Lesson(
-//     "idC2",
-//     "Урок2",
-//     "Парфграф1",
-//     "Параграфф2",
-//     '<iframe width="560" height="315" src="https://www.youtube.com/embed/0O7MAFev8NI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-//     "Параграфф3",
-//     "btnClose2",
-//     "Урок 2",
-//     "btn2");
-//     lesson2.create();
-//
-//
-//
-//     var lesson3 = new Lesson(
-//     "idC3",
-//     "Урок3",
-//     "Парфграф1",
-//     "Параграфф2",
-//     '<iframe width="560" height="315" src="https://www.youtube.com/embed/0O7MAFev8NI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-//     "Параграфф3",
-//     "btnClose3",
-//     "Урок 3",
-//     "btn3");
-//     lesson3.create();
-
-//******************************************************
-    // Вставить новый урок
-    // Скопируйте и вставьту новые значения
-
-    // var lesson4  = new Lesson(  //номер урока
-    // "idC4", //id добавляемого контейнера
-    // "Урок4", //Название урока
-    // "Парфграф1", // текст первого параграфа
-    // "Параграф2", // текст второго параграфа
-    // '<iframe width="560" height="315" src="https://www.youtube.com/embed/0O7MAFev8NI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // ссылка на видео в ютуб
-    // "Параграф3", //текст третьего параграфа
-    // "btnClose4", //id Кнопки "Закрыть урок"
-    // "Урок 4", //Натпись на кнопке, которая открывает урок
-    // "btn4"); //id Кнопки , которая открывает урок
-    // lesson4.create();//запускаем метод создания урока
 
     //Добавить функцию открытия и закрытия урока
 
@@ -267,14 +151,93 @@ request.send();
 
 
 
-        // // Класс уроков базовый  курс
-        //
-        // class LessonBasic extends Lesson{
-        //   constructor(idC, h3, p1, p2, divVideo, p3, closeId,  btn, clas, download){
-        //     super(idC, h3, p1, p2, divVideo, p3, closeId,  btn, clas);
-        //     this.download = download;
-        //   }
-        //   create(){
-        //     document.getElementById(this.idC).innerHTML ="+ <input name="upl" type="file" class="input-file" multiple><br><button>отправить</button>"
-        //   }
-        // }
+      // Функция переключения мероприятий
+
+      document.getElementById("event1").onclick = function(){
+        document.getElementById("event1").classList.add("eventActiv");
+        document.getElementById("event2").classList.remove("eventActiv");
+        document.getElementById("event3").classList.remove("eventActiv");
+        document.getElementById("event4").classList.remove("eventActiv");
+        document.getElementById("event5").classList.remove("eventActiv");
+        document.getElementById("event6").classList.remove("eventActiv");
+        document.getElementById("event7").classList.remove("eventActiv");
+        document.getElementById("event8").classList.remove("eventActiv");
+        document.getElementById("events").innerText = "  Разберем виды живой изгороди";
+      }
+      document.getElementById("event2").onclick = function(){
+        document.getElementById("event2").classList.add("eventActiv");
+        document.getElementById("event1").classList.remove("eventActiv");
+        document.getElementById("event3").classList.remove("eventActiv");
+        document.getElementById("event4").classList.remove("eventActiv");
+        document.getElementById("event5").classList.remove("eventActiv");
+        document.getElementById("event6").classList.remove("eventActiv");
+        document.getElementById("event7").classList.remove("eventActiv");
+        document.getElementById("event8").classList.remove("eventActiv");
+        document.getElementById("events").innerText = " Отработаем на практике посадку живой изгороди";
+      }
+      document.getElementById("event3").onclick = function(){
+        document.getElementById("event3").classList.add("eventActiv");
+        document.getElementById("event2").classList.remove("eventActiv");
+        document.getElementById("event1").classList.remove("eventActiv");
+        document.getElementById("event4").classList.remove("eventActiv");
+        document.getElementById("event5").classList.remove("eventActiv");
+        document.getElementById("event6").classList.remove("eventActiv");
+        document.getElementById("event7").classList.remove("eventActiv");
+        document.getElementById("event8").classList.remove("eventActiv");
+        document.getElementById("events").innerText = " Как подготовить участок к посадке газона";
+      }
+      document.getElementById("event4").onclick = function(){
+        document.getElementById("event4").classList.add("eventActiv");
+        document.getElementById("event2").classList.remove("eventActiv");
+        document.getElementById("event3").classList.remove("eventActiv");
+        document.getElementById("event1").classList.remove("eventActiv");
+        document.getElementById("event5").classList.remove("eventActiv");
+        document.getElementById("event6").classList.remove("eventActiv");
+        document.getElementById("event7").classList.remove("eventActiv");
+        document.getElementById("event8").classList.remove("eventActiv");
+        document.getElementById("events").innerText = "  Правильный уход за газоном";
+      }
+      document.getElementById("event5").onclick = function(){
+        document.getElementById("event5").classList.add("eventActiv");
+        document.getElementById("event2").classList.remove("eventActiv");
+        document.getElementById("event3").classList.remove("eventActiv");
+        document.getElementById("event4").classList.remove("eventActiv");
+        document.getElementById("event1").classList.remove("eventActiv");
+        document.getElementById("event6").classList.remove("eventActiv");
+        document.getElementById("event7").classList.remove("eventActiv");
+        document.getElementById("event8").classList.remove("eventActiv");
+        document.getElementById("events").innerText = " Подготовка участка к посадке газона";
+      }
+      document.getElementById("event6").onclick = function(){
+        document.getElementById("event6").classList.add("eventActiv");
+        document.getElementById("event2").classList.remove("eventActiv");
+        document.getElementById("event3").classList.remove("eventActiv");
+        document.getElementById("event4").classList.remove("eventActiv");
+        document.getElementById("event5").classList.remove("eventActiv");
+        document.getElementById("event1").classList.remove("eventActiv");
+        document.getElementById("event7").classList.remove("eventActiv");
+        document.getElementById("event8").classList.remove("eventActiv");
+        document.getElementById("events").innerText = " Какие бывают садовые дорожки";
+      }
+      document.getElementById("event7").onclick = function(){
+        document.getElementById("event7").classList.add("eventActiv");
+        document.getElementById("event2").classList.remove("eventActiv");
+        document.getElementById("event3").classList.remove("eventActiv");
+        document.getElementById("event4").classList.remove("eventActiv");
+        document.getElementById("event5").classList.remove("eventActiv");
+        document.getElementById("event6").classList.remove("eventActiv");
+        document.getElementById("event1").classList.remove("eventActiv");
+        document.getElementById("event8").classList.remove("eventActiv");
+        document.getElementById("events").innerText = "Живые бордюры, какие растения выбрать?";
+      }
+      document.getElementById("event8").onclick = function(){
+        document.getElementById("event8").classList.add("eventActiv");
+        document.getElementById("event2").classList.remove("eventActiv");
+        document.getElementById("event3").classList.remove("eventActiv");
+        document.getElementById("event4").classList.remove("eventActiv");
+        document.getElementById("event5").classList.remove("eventActiv");
+        document.getElementById("event6").classList.remove("eventActiv");
+        document.getElementById("event7").classList.remove("eventActiv");
+        document.getElementById("event1").classList.remove("eventActiv");
+        document.getElementById("events").innerText = "Посадка газона";
+      }

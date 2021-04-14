@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Отправка формы на почту </title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+    <style>
+      h1{
+        margin: 90px 0;
+      }
+    </style>
   </head>
 
   <body>
@@ -23,29 +28,30 @@
             <div class="logo">
               <a href="index.html">
                 <img src="images/logo.png" alt="logo">
-                <!-- <span class="logo">Logo</span> -->
-
               </a>
+              <a href="index.html">
+                <span class="logoName">birch</span>
+               </a>
 
             </div>
 
             <nav class="menu">
               <ul class="menu_list">
-                <div class="burger">
+                <li class="burger">
                   <span></span>
-                </div>
+                </li>
 
-                <li><a class="menu_link active" href="index.html">Главная</a></li>
-                <li><a class="menu_link" href="#">Курсы</a>
+                <li><a class="menu_link" href="index.html">Главная</a></li>
+                <li><a class="menu_link" href="courses.html">Курсы</a>
 
                   <ul class="sub-menu_list">
-                    <li><a class="sub-menu_link" href="#">Базовые</a></li>
-                    <li><a class="sub-menu_link" href="#">Эконом</a></li>
-                    <li><a class="sub-menu_link" href="#">Люкс</a></li>
+                    <li><a class="sub-menu_link" href="free.html">Бесплатный курс</a></li>
+                    <li><a class="sub-menu_link" href="basic.html">Базовый курс</a></li>
+                    <li><a class="sub-menu_link" href="practice_course.html">Курс с практикой</a></li>
                   </ul>
 
                 </li>
-                <li><a class="menu_link" href="#">О нас</a></li>
+                <li><a class="menu_link" href="about.html">О нас</a></li>
 
               </ul>
             </nav>
@@ -78,7 +84,7 @@
 
                </form>
              </div>
-             <div id="regDiv"></div>
+             <!-- <div id="regDiv"></div> -->
              <button id="createUser">Регистрация</button>
           </div>
         </div>
@@ -99,14 +105,16 @@
 
           </section>
         </div>
-
+</div>
       </main>
       <footer class="footer">
         <div class="wrapper">
           <div class="wrapper_foorer">
             <div class="logo_footer">
+              <a href="index.html">
                 <img src="images/logo.png" alt="logo">
-              <span>Курсы ландшафтного дизайна</span>
+                <span class="logoName">birch</span>
+              </a>
             </div>
             <div class="footer_menu">
               <h3>Меню</h3>
@@ -120,18 +128,23 @@
               <div class="footer_curses">
                 <h3>Тарифы курсов</h3>
                 <ul class="footer_curses_list">
-                  <li><a class="footer_menu_link " href="#">Бесплатно</a></li>
-                  <li><a class="footer_menu_link " href="#">Эконом</a></li>
-                  <li><a class="footer_menu_link" href="#">Люкс</a></li>
+                  <li><a class="footer_menu_link " href="free.html">Бесплатно</a></li>
+                  <li><a class="footer_menu_link " href="basic.html">Базовый курс</a></li>
+                  <li><a class="footer_menu_link" href="practice_course.html">Курс с практикой</a></li>
 
                 </ul>
+              </div>
+              <div class="contact">
+                <h3>Контакты</h3>
+                <a href="tel:+380958888888">Тел: +3 8(095)888-88-88</a><br><br>
+                <a href="mailto:nataliaof380@gmail.com">nataliaof380@gmail.com</a>
               </div>
               <div class="footr_social">
                 <h3>Мы в соцсетях</h3>
                 <div class="social_logo">
-                  <a href="#"><img src="images/facebook-logo.png" alt="facebook"></a><br>
-                  <a href="#"><img src="images/instagram-logo.png" alt="Instagram"></a><br>
-                  <a href="#"><img src="images/youtube-logo.png" alt="youtube"></a><br>
+                  <a href="#"><img src="images/facebook.svg" alt="facebook"></a><br>
+                  <a href="#"><img src="images/instagram.svg" alt="Instagram"></a><br>
+                  <a href="#"><img src="images/youtube.svg" alt="youtube"></a><br>
                 </div>
               </div>
 
@@ -142,10 +155,9 @@
         </div>
       </footer>
 
-
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="js/slick.min.js"></script>
-      <script src="js/main.js"></script>
+      <!-- <script src="js/main.js"></script> -->
       <script src="js/script.js"></script>
       <script src="js/form.js"></script>
       <script>

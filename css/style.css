@@ -209,7 +209,7 @@ header {
   transition: 1s;
   color: #ffffff;
   margin-bottom: 5px;
-  margin-right: 30px;
+  margin-right: 10vw;
   text-transform: uppercase;
   font-size: 20px;
 }
@@ -262,7 +262,7 @@ header {
 .sub-menu_list .sub-menu_link {
   display: block;
   color: #ffffff;
-  padding: 5px;
+  padding: 20px 20px 10px 20px;
 }
 main {
   position: relative;
@@ -312,7 +312,7 @@ main #cookie {
   margin-top: 50px;
   transform: translate(0, 120%);
   opacity: 0.5;
-  transition: all 2.5s ease 0s;
+  transition: all 4.5s ease 0s;
 }
 .main_info .info_box .contentName h1._active {
   transform: translate(0, 0);
@@ -321,7 +321,7 @@ main #cookie {
 .main_info .info_box .contentName p {
   transform: translate(0, 120%);
   opacity: 0.5;
-  transition: all 2.8s ease 0s;
+  transition: all 4.8s ease 0s;
 }
 .main_info .info_box .contentName p._active {
   transform: translate(0, 0);
@@ -335,6 +335,7 @@ main #cookie {
   height: 150px;
   margin-bottom: 30px;
   margin: 10px auto;
+  cursor: pointer;
 }
 .main_info .info_box .content img {
   width: 150px;
@@ -362,8 +363,8 @@ main #cookie {
 .main_info .info_box .content .plication-form form input {
   font-size: 20px;
 }
-.main_info .info_box .content .plication-form form input p.validP {
-  margin-bottom: 0;
+.main_info .info_box .content .plication-form form input .validP {
+  margin-left: 10px;
 }
 .main_info .social {
   display: flex;
