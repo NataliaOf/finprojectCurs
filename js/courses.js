@@ -10,7 +10,7 @@
     var  searth = document.getElementById('searchT').value;
 console.log("Поиск города");
    // Подставляю в ссылку запрос
-  var a ="http://api.openweathermap.org/data/2.5/weather?q="+ searth;
+  var a ="https://api.openweathermap.org/data/2.5/weather?q="+ searth;
   a +=  "&units=metric&lang=ru&appid=04290cb244a2433a949228107b1fe755&lang=ru";
   // Проверяю наличие объекта XMLHttpRequest
     let request;
