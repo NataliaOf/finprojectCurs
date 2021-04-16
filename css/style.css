@@ -250,6 +250,9 @@ header {
 .box-nav .check-in #dialog-form label {
   margin-left: 10px;
 }
+.box-nav .check-in input {
+  width: 100%;
+}
 .sub-menu_list {
   display: none;
   position: absolute;
@@ -738,7 +741,6 @@ footer h3 {
     margin-top: 70%;
     width: 100%;
     height: 35vw;
-    border: 2px solid red;
   }
   main #cookie {
     width: 90%;

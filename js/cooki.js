@@ -13,6 +13,7 @@ document.getElementById("deliteUser").addEventListener("click",function() {
         document.cookie = "regPass=;expires=Tue, 19 Jan 2019 03:14:07 GMT";
 // запускаю функцию проверки куки при загрузке
       checkReg();
+      
      });
 
      // Функция прверки куки при загрузке

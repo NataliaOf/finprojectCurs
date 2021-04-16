@@ -13,7 +13,7 @@ console.log("Отправить");
   let nameCheck =  /^[а-я]/i;
   let emailCheck = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
   let passCheck = /\d/;
-  // let passCheck = /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$/
+
 
   // Содержание input
   var name = document.getElementById('name').value;

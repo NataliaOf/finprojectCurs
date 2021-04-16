@@ -2,7 +2,6 @@
 
 // Бот   https://web.telegram.org/#/im?p=g566634144
 // Чат   https://web.telegram.org/#/im?p=@landscapeDes_bot
-
 // поля из формы
 $name = $_POST['userName'];
 $phone = $_POST['userTel'];

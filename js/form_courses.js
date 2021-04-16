@@ -78,8 +78,6 @@ document.getElementById('yourPhone2').classList.remove('noValid');
 
 });
 
-
-
 // функция проверки формы2 на страницу курсы
 let payBtn2 = document.getElementById("payBtn2");
 

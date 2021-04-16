@@ -30,7 +30,6 @@ data.innerText = dText;
 
 
 let p = document.createElement('p');
-
 p.innerText = comment;
 
 

@@ -1,7 +1,4 @@
 // window.navigator.geolocation.getCurrentPosition(success[, error[, options]]);
-
-
-
 // Нахожу кнопку поиска города
    var  btn = document.getElementById('searchBtn');
   // Функция поиска
