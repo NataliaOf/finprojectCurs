@@ -1,0 +1,248 @@
+// *****Переменные******
+@fontH: 'Inter', sans-serif;
+@fontP: 'Roboto Slab', serif;
+@colorH: #dba51d;
+@colorP: #fff;
+@bgBtn: #2d2828;
+@bgDiv: #8b8383;
+@background1: linear-gradient(180deg, rgba(50, 42, 39, 0) 0%, rgba(45, 40, 40, 0.85) 33.85%, #2D2828 49.48%, #2D2828 68.75%, #2D2828 82.29%, #2D2828 100%);
+
+
+// ********Миксины********
+.flex(){
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hover_div(){
+    transform: scale(1.1);
+}
+
+// анимация
+.anim-show(){
+  transform: translate(0, 120%);
+   opacity: 0.5;
+
+}
+ .active(){
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.animNone(){
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+//****************************************************
+section{
+  padding: 30px;
+}
+
+.access{
+  h1{
+    margin-top: 50px;
+    .anim-show();
+    transition: all 4.5s ease 0s;
+
+    &._active{
+      .active();
+    }
+  }
+  p{
+   .anim-show();
+    transition: all 4.8s ease 0s;
+       &._active{
+     .active()
+    }
+  }
+  .thanks{
+
+    h2{
+      .animNone();
+    }
+    p{
+      .animNone();
+    }
+    form{
+      .animNone();
+    }
+  }
+
+}
+.cours_header{
+  .flex();
+}
+
+//Погода
+.weather{
+  width: 50%;
+  text-align: center;
+  h2{
+    .animNone();
+  }
+  .weather-box{
+    .flex();
+    span{
+      color:@colorH;
+    }
+     .temperature{
+       color:@colorP;
+       font-size: 45px;
+
+       text-align: center;
+     }
+  }
+
+}
+
+.progress{
+  h2{
+    .animNone();
+  }
+  span{
+    display: block;
+    color:@colorH;
+    margin-bottom: 20px;
+  }
+    width: 50%;
+    text-align: center;
+    .progress_box{
+      width: 80%;
+      height: 10px;
+      background-color: #e7deeb;
+      margin: 0 auto;
+
+    }
+    #progress_color{
+      width: 0;
+      height: 10px;
+      background-color:@colorH;
+    }
+}
+#basic, #practice{
+  display: none;
+}
+
+.cours_free{
+  text-align: center;
+  #cours_btn{
+   padding-bottom: 20px;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 20px;
+  }
+  #cours_lesson{
+    .hidden{
+      display: none;
+    }
+    div{
+    margin-bottom: 20px;
+    }
+    p{
+      margin-top: 20px;
+    }
+   input{
+     opacity: 0;
+  visibility: hidden;
+  position: absolute;
+   }
+   label{
+     border: 2px solid @colorP;
+     color: @colorP;
+     padding: 5px 10px;
+     display: inline-block;
+     width: auto;
+     margin: 10px 0;
+     cursor: pointer;
+     transition: .5s;
+     &:hover{
+       box-shadow:-5px 5px 10px rgba(230, 236, 240, 0.3);
+       transform: scale(1.1);
+       outline-offset: 0;
+       outline: 0;
+     }
+   }
+  }
+}
+
+// адаптив видео
+
+.thumb-wrap {
+  position: relative;
+  padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  height: 0;
+  overflow: hidden;
+}
+.thumb-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  outline-width: 0;
+}
+
+.planned_activities{
+  text-align: left;
+  .box_events{
+    .flex();
+    align-items: center;
+  }
+
+  h2{
+    .animNone();
+  }
+  ul{
+    width: 45%;
+    li{
+      margin-bottom: 20px;
+      color:  @colorP;
+      padding: 20px;
+      span{
+        color: @colorH;
+      }
+      &:hover{
+        cursor: pointer;
+        background-color: #8a8a87;
+      }
+
+    }
+
+  }
+  .eventActiv{
+    background-color: #8a8a87;
+    border: 2px solid  @colorP;
+  }
+  #events{
+    padding: 30px;
+    height: 100px;
+    width: 45%;
+    border: 2px solid  @colorP;
+    color: @colorP;
+      background-color: #8a8a87;
+  }
+}
+
+@media screen and (max-width:1000px){
+  .cours_header{
+    display: block;
+  }
+  .weather,
+  .progress{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:600px){
+  .planned_activities .box_events{
+    display: block;
+  }
+  .box_events ul{
+    width: 100%;
+  }
+  .box_events #events{
+    width: 100%;
+  }
+}

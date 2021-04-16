@@ -1,0 +1,439 @@
+// *****Переменные******
+@fontH: 'Inter', sans-serif;
+@fontP: 'Roboto Slab', serif;
+@colorH: #dba51d;
+@colorP: #fff;
+@bgBtn: #2d2828;
+@bgDiv: #8b8383;
+@background1: linear-gradient(180deg, rgba(50, 42, 39, 0) 0%, rgba(45, 40, 40, 0.85) 33.85%, #2D2828 49.48%, #2D2828 68.75%, #2D2828 82.29%, #2D2828 100%);
+
+
+// ********Миксины********
+.flex(){
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hover_div(){
+    transform: scale(1.1);
+}
+
+// анимация
+.anim-show(){
+  transform: translate(0, 120%);
+   opacity: 0.5;
+
+}
+ .active(){
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.animNone(){
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+//****************************************************
+
+.main2{
+  margin-top: -83vh ;
+  padding-bottom: 200px;
+  position: relative;
+  z-index: 5;
+  background: linear-gradient(180deg, rgba(50, 42, 39, 0) 0%, rgba(45, 40, 40, 0.85) 33.85%, #2D2828 49.48%, #2D2828 68.75%, #2D2828 82.29%, #2D2828 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
+  .main_info{
+    h1,h3{
+      .anim-show();
+      transition: all 4.8s ease 0s;
+
+      &._active{
+        .active();
+      }
+    }
+    p{
+      .anim-show();
+      transition: all 4.8s ease 0s;
+
+      &._active{
+        .active();
+      }
+    }
+  }
+}
+h2{
+    .anim-show();
+    transition: all 2.2s ease 0s;
+
+    &._active{
+      .active();
+    }
+}
+
+.teachers{
+
+  width: 90%;
+  .wrapper_teachers{
+      .flex();
+    .teacher{
+      width: 45%;
+      min-width: 350px;
+        margin-bottom: 20px;
+      .teacher_name{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 20px;
+        img{
+          width: 100px;
+          border-radius:50%;
+        }
+        .anim-show();
+        transition: all 4.5s ease 0s;
+
+          &._active{
+          .active();
+      }
+      }
+      p{
+        .animNone();
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+section.reviews{
+  padding: 30px;
+}
+
+// Отзывы слайдер
+ .slider{
+   .slider_item{
+     width: 100%;
+     height: 250px;
+    background-color: @bgDiv;
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     color: @colorP;
+     padding: 20px;
+     margin-right: 10px;
+     .review{
+       .flex();
+       align-items: center;
+       img{
+         width: 100px;
+         border-radius: 50%;
+       }
+       h3{
+         color:@colorP;
+       }
+       margin-bottom: 20px;
+     }
+
+   }
+ }
+
+ /* Слайдер */
+
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+  display: flex;
+
+}
+
+/* Стрелка */
+.slick-arrow{
+
+  width: 0;
+  height: 0;
+
+}
+// /* Стрелка влево */
+.slider .slick-arrow.slick-prev{
+  left: 3px;
+font-size: 0;
+}
+// /* Стрелка вправо */
+.slider .slick-arrow.slick-next{
+  right: 3px;
+  font-size: 0;
+
+}
+
+/* Точки (булиты) */
+.slider .slick-dots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider .slick-dots li{}
+/* Активная точка */
+.slider .slick-dots li.slick-active button{
+  background-color: @colorH;
+}
+/* Элемент точки */
+.slider .slick-dots li button{
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border: none;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+  .slider{
+    position: relative;
+    // padding: 0 50px;
+  }
+  .slider .slick-arrow{
+
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    margin: -30px -2000px 0 -2000px;
+  }
+
+
+
+
+  //стили аккардеона
+  section.questions{
+    padding: 30px;
+  }
+  .accordion {
+    background-color: @bgDiv;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+
+    .anim-show();
+      transition: all 2s ease 0s;
+
+      &._active{
+        .active();
+      }
+      span{
+        float: right;
+        font-size: 30px;
+        transition: 0.5s;
+      }
+}
+.activee, .accordion:hover {
+    background-color: #554c4a;
+}
+.activee, .accordion:hover span{
+  transform: rotate(45deg);
+}
+.panel {
+    padding: 10px 18px;
+    background-color: #6b6464;
+    display: none;
+    overflow: hidden;
+}
+
+
+
+// Стили страницы курсов
+
+.main_info{
+  h1{
+    .anim-show();
+      transition: all 4.5s ease 0s;
+
+      &._active{
+        .active();
+      }
+  }
+  h3{
+      .anim-show();
+      transition: all 4.8s ease 0s;
+
+      &._active{
+        .active();
+      }
+    }
+
+}
+
+// Стили вкладок курсов
+.tab_courses {
+    height: 100%;
+    margin: 0;
+    position: relative;
+    z-index: 6;
+    .flex{
+       .flex();
+         background-color: @bgDiv;
+
+    }
+}
+
+
+.tablink {
+    background-color:@bgDiv;
+    color: white;
+
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 33%;
+
+}
+
+
+
+.tabcontent {
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+    p.animNone{
+      margin-bottom: 20px;
+    .animNone();
+    span{
+      color:@colorH;
+    }
+    }
+    h2.animNone{
+      margin-bottom: 20px;
+      .animNone();
+
+    }
+    ul{
+       margin-bottom: 30px;
+      li{
+        margin-bottom: 10px;
+        color:@colorP;
+          line-height: 30px;
+
+      }
+      li::before{
+        content: "";
+        display: inline-block;
+        margin-bottom: -5px;
+        width: 30px;
+        height: 30px;
+        background: url("../images/check.png");
+        background-size: 30px 30px;
+      }
+    }
+
+}
+
+.wrapper_cours{
+  .flex();
+  .info_cours{
+    width: 50%;
+    margin-right: 20px;
+  }
+  .form_cours{
+    width: 45%;
+    form p{
+      .animNone();
+    }
+  }
+}
+
+section.comments{
+  width: 100%;
+  padding: 30px;
+  .article{
+
+    margin-bottom: 30px;
+    padding: 10px;
+    border-bottom: 2px solid #605e5e;
+  }
+  .comment{
+    margin-bottom: 30px;
+    padding: 10px;
+    border-bottom: 2px solid #605e5e;
+    span{
+      color:#8e9391;
+    }
+    p{
+
+      margin: 10px 0;
+    }
+  }
+  .comment-add{
+    span{
+      color: @colorP;
+    }
+    textarea{
+      width: 80%;
+    }
+  }
+
+}
+
+
+//**********стили ошибка*******
+
+.errorInfo{
+  text-align: center;
+  img{
+    margin-top: 30px;
+    width: 40%;
+  }
+}
+
+#Home {background-color: @bgBtn;}
+#News {background-color: @bgBtn;}
+#Contact {background-color: @bgBtn;}
+
+@media screen and (max-width:600px){
+  .tab_courses .flex{
+    display: block;
+
+  }
+  .tablink{
+    width: auto;
+    text-align: center;
+  }
+  .slider p{
+    font-size: 14px;
+  }
+  .slider .slider_item .review{
+    margin-bottom: 0;
+  }
+  .slider .slider_item .review img{
+    width: 50px;
+  }
+  .slider .slider_item .review h3{
+    margin-bottom: 10px;
+  }
+  .slider .slider_item {
+    padding: 10px;
+  }
+
+
+}
+
+
+@media screen and (max-width:1000px){
+  .wrapper_cours{
+    display: block;
+  }
+  .wrapper_cours .info_cours,
+  .wrapper_cours .form_cours {
+    width: 100%;
+  }
+}
